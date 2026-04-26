@@ -14,6 +14,7 @@ body {
   background:#000;
   color:#fff;
   font-family:'Inter', sans-serif;
+  text-align:center;
 }
 
 /* WRAPPER /
@@ -24,21 +25,12 @@ body {
 }
 
 / LOGO /
-.logo {
-  text-align:center;
+.logo img {
+  width:100px;
   margin-bottom:20px;
 }
 
-.logo img {
-  width:100px;
-}
-
-/ HERO /
-.hero {
-  text-align:center;
-  margin-bottom:60px;
-}
-
+/ HERO TEXT /
 .hero h1 {
   font-size:64px;
   font-weight:900;
@@ -58,8 +50,8 @@ body {
 
 .btn {
   display:inline-block;
-  padding:16px 38px;
-  margin:8px;
+  padding:16px 40px;
+  margin:10px;
   border-radius:12px;
   text-decoration:none;
   font-weight:700;
@@ -68,30 +60,31 @@ body {
 
 .buy-btn {
   background:#ff0000;
-  color:#fff;
-  box-shadow:0 0 25px rgba(255,0,0,0.7);
+  color:white;
+  box-shadow:0 0 25px rgba(255,0,0,0.8);
 }
 
 .twitter-btn {
   border:2px solid #444;
-  color:#fff;
+  color:white;
 }
 
-/ CARDS /
+/ CARD STYLE /
 .card {
-  background:#0a0a0a;
-  border:1px solid rgba(255,0,0,0.3);
-  border-radius:14px;
+  margin:40px auto;
   padding:30px;
-  margin:30px 0;
+  max-width:700px;
+  background:#0a0a0a;
+  border:1px solid rgba(255,0,0,0.4);
+  border-radius:14px;
 }
 
 / TITLES /
 .card h2 {
   font-size:28px;
   font-weight:900;
+  margin-bottom:20px;
   text-transform:uppercase;
-  margin-bottom:15px;
 }
 
 .card h2 span {
@@ -100,17 +93,25 @@ body {
 
 / TEXT /
 .card p {
+  font-size:18px;
   color:#ccc;
-  font-size:17px;
   line-height:1.7;
 }
 
-/ TOKENOMICS spacing /
+/ TOKENOMICS /
 .tokenomics p {
   line-height:2;
 }
 
-/ MEMES /
+/ IMAGES WITH RED FRAME /
+.image-box {
+  border:2px solid rgba(255,0,0,0.5);
+  border-radius:12px;
+  padding:6px;
+  margin:10px;
+}
+
+/ MEMES GRID /
 .memes {
   display:grid;
   grid-template-columns:repeat(4,1fr);
@@ -120,13 +121,12 @@ body {
 
 .memes img {
   width:100%;
-  border-radius:12px;
+  border-radius:10px;
 }
 
 / BUY IMAGE /
 .buy {
-  text-align:center;
-  margin-top:60px;
+  margin-top:50px;
 }
 
 .buy img {
@@ -136,7 +136,6 @@ body {
 
 / FOOTER /
 .footer {
-  text-align:center;
   margin-top:60px;
   color:#555;
   font-size:14px;
@@ -203,15 +202,17 @@ body {
 
 <!-- MEMES -->
 <div class="memes">
-  <img src="liquidity.png">
-  <img src="final.png">
-  <img src="community.png">
-  <img src="pepe.png">
+  <div class="image-box"><img src="liquidity.png"></div>
+  <div class="image-box"><img src="final.png"></div>
+  <div class="image-box"><img src="community.png"></div>
+  <div class="image-box"><img src="pepe.png"></div>
 </div>
 
 <!-- BUY -->
 <div class="buy">
-  <img src="buy.png">
+  <div class="image-box">
+    <img src="buy.png">
+  </div>
 </div>
 
 <!-- FOOTER -->
