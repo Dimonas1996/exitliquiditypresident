@@ -3,94 +3,181 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Exit Liquidity President ($ELP)</title>
+<title>$ELP - Exit Liquidity President</title>
 
 <style>
 body {
     margin: 0;
+    font-family: Arial;
     background: black;
     color: white;
-    font-family: Arial, sans-serif;
-    text-align: center;
 }
 
-section {
-    padding: 40px 20px;
+.container {
+    max-width: 1200px;
+    margin: auto;
 }
 
-img {
-    max-width: 90%;
-    height: auto;
-    border-radius: 12px;
-    margin-top: 20px;
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    gap: 30px;
 }
 
-h1 {
-    font-size: 40px;
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+}
+
+.red {
     color: red;
 }
 
-p {
-    font-size: 20px;
+.hero-buttons a {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 12px 25px;
+    background: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.hero img {
+    width: 50%;
+    border-radius: 12px;
+}
+
+.section {
+    padding: 40px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.memes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.memes img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid #222;
 }
 </style>
 </head>
 
 <body>
 
+<div class="container">
+
 <!-- HERO -->
-<section>
+<div class="hero">
+    <div class="hero-text">
+        <h1>YOU ARE THE <span class="red">EXIT LIQUIDITY</span></h1>
+        <p>He always sells first.</p>
+        <p>You already know how this ends.</p>
+
+        <div class="hero-buttons">
+            <a href="#">BUY $ELP</a>
+            <a href="#" style="background:#333;">VIEW CHART</a>
+        </div>
+    </div>
+
     <img src="hero.png">
-    <h1>You are not early.</h1>
-    <h1>You are the exit liquidity.</h1>
-</section>
+</div>
 
-<!-- REALITY -->
-<section>
-    <img src="liquidity.png">
-    <p>Everyone thinks they’re early.</p>
-    <p>But someone always sells first.</p>
-</section>
+<!-- ABOUT + TOKENOMICS -->
+<div class="grid section">
 
-<!-- VILLAIN -->
-<section>
-    <img src="pepe.png">
-    <p>You ape.</p>
-    <p>He exits.</p>
-</section>
+    <div class="card">
+        <h2 class="red">ABOUT $ELP</h2>
+        <h2>THIS IS NOT A PROJECT.<br>THIS IS A <span class="red">LESSON.</span></h2>
+        <p>They make the money.</p>
+        <p>You exit the liquidity.</p>
+        <p>Every. Single. Time.</p>
+        <p>Now you know.</p>
+    </div>
 
-<!-- FINAL MESSAGE -->
-<section>
-    <img src="final.png">
-    <h1>This ends the same way.</h1>
-</section>
+    <div class="card">
+        <img src="logo.png">
+    </div>
 
-<!-- TOKENOMICS -->
-<section>
-    <img src="tokenomics.png">
-    <p>Supply: 1,000,000,000</p>
-    <p>Tax: 0%</p>
-    <p>Chain: Solana</p>
-</section>
+    <div class="card">
+        <h2 class="red">TOKENOMICS</h2>
+        <p>Name: Exit Liquidity President</p>
+        <p>Symbol: $ELP</p>
+        <p>Supply: 1,000,000,000</p>
+        <p>Tax: 0%</p>
+        <p>Chain: Solana</p>
+    </div>
 
-<!-- COMMUNITY -->
-<section>
-    <img src="community.png">
-    <h1>Join the community</h1>
-</section>
+    <div class="card">
+        <img src="tokenomics.png">
+    </div>
+
+</div>
+
+<!-- MEMES -->
+<div class="section">
+    <h2 class="red">MEMES</h2>
+
+    <div class="memes">
+        <img src="hero.png">
+        <img src="liquidity.png">
+        <img src="community.png">
+        <img src="pepe.png">
+    </div>
+</div>
 
 <!-- BUY -->
-<section>
-    <img src="buy.png">
-    <h1>Buy $ELP</h1>
-    <p>Coming soon</p>
-</section>
+<div class="section grid">
+
+    <div class="card">
+        <h2>BUY $ELP ON <span class="red">PUMP.FUN</span></h2>
+        <p>1. Create wallet</p>
+        <p>2. Get SOL</p>
+        <p>3. Buy $ELP</p>
+    </div>
+
+    <div class="card">
+        <img src="buy.png">
+    </div>
+
+</div>
 
 <!-- FOOTER -->
-<section>
-    <img src="logo.png" width="120">
-    <p>$ELP</p>
-</section>
+<div class="footer">
+    <img src="logo.png" width="80">
+    <p>$ELP - Exit Liquidity President</p>
+</div>
+
+</div>
 
 </body>
 </html>
