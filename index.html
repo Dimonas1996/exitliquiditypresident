@@ -3,6 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+
 <title>$ELP</title>
 
 <style>
@@ -10,13 +14,14 @@ body {
   margin:0;
   background:black;
   color:white;
-  font-family:Arial, sans-serif;
+  font-family:'Montserrat', sans-serif;
 }
 
 /* WRAPPER /
 .wrapper {
   max-width:1200px;
   margin:auto;
+  padding:0 20px;
 }
 
 / LOGO /
@@ -29,30 +34,14 @@ body {
   width:110px;
 }
 
-/ HERO /
-.hero {
-  position:relative;
-}
-
-.hero img {
-  width:100%;
-  display:block;
-  filter:brightness(0.5);
-}
-
-.hero-text {
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%, -50%);
-  text-align:center;
-}
-
+/ HERO TEXT /
 .hero-text h1 {
-  font-size:70px;
+  font-family:'Orbitron', sans-serif;
+  font-size:60px;
   font-weight:900;
-  margin:0;
-  text-shadow:0 0 20px red;
+  text-align:center;
+  margin:20px 0;
+  letter-spacing:2px;
 }
 
 .red {
@@ -61,7 +50,8 @@ body {
 
 / BUTTONS /
 .buttons {
-  margin-top:25px;
+  text-align:center;
+  margin:20px 0 40px;
 }
 
 .btn {
@@ -70,51 +60,46 @@ body {
   margin:10px;
   border-radius:12px;
   text-decoration:none;
-  font-weight:bold;
+  font-weight:700;
   font-size:18px;
 }
 
+/ BUY /
 .buy-btn {
   background:#ff0000;
   color:white;
   box-shadow:0 0 20px red;
 }
 
+/ TWITTER /
 .twitter-btn {
-  border:2px solid #444;
+  border:2px solid #555;
   color:white;
 }
 
 / SECTIONS /
 .section {
-  padding:60px 20px;
+  margin:60px 0;
 }
 
+/ HEADINGS /
 .section h2 {
-  text-align:center;
-  font-size:40px;
-  margin-bottom:30px;
+  font-family:'Orbitron', sans-serif;
+  font-size:32px;
+  letter-spacing:2px;
+  margin-bottom:20px;
 }
 
-/ ABOUT /
-.about {
-  background:#0a0a0a;
-  text-align:center;
+/ TEXT /
+.section p {
   font-size:18px;
+  color:#ccc;
   line-height:1.6;
 }
 
 / TOKENOMICS /
 .tokenomics {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
-}
-
-.card {
-  background:#111;
-  padding:20px;
-  border-radius:12px;
+  line-height:2;
 }
 
 / MEMES /
@@ -129,27 +114,10 @@ body {
   border-radius:12px;
 }
 
-/ BUY SECTION /
-.buy img {
-  width:100%;
-  border-radius:12px;
-}
-
-/ FOOTER /
-.footer {
-  text-align:center;
-  padding:40px;
-  color:#666;
-}
-
 / MOBILE */
 @media(max-width:800px){
   .hero-text h1 {
-    font-size:34px;
-  }
-
-  .tokenomics {
-    grid-template-columns:1fr;
+    font-size:32px;
   }
 
   .memes {
@@ -169,24 +137,21 @@ body {
   <img src="logo.png">
 </div>
 
-<!-- HERO -->
-<div class="hero">
-  <img src="hero.png">
+<!-- HERO TEXT -->
+<div class="hero-text">
+  <h1>
+    YOU ARE THE <span class="red">EXIT LIQUIDITY</span>
+  </h1>
+</div>
 
-  <div class="hero-text">
-    <h1>
-      YOU ARE THE <span class="red">EXIT LIQUIDITY</span>
-    </h1>
-
-    <div class="buttons">
-      <a href="#" class="btn buy-btn">BUY $ELP</a>
-      <a href="https://x.com/elpcoin?s=21" target="_blank" class="btn twitter-btn">TWITTER</a>
-    </div>
-  </div>
+<!-- BUTTONS -->
+<div class="buttons">
+  <a href="#" class="btn buy-btn">BUY $ELP</a>
+  <a href="https://x.com/elpcoin?s=21" target="_blank" class="btn twitter-btn">TWITTER</a>
 </div>
 
 <!-- ABOUT -->
-<div class="section about">
+<div class="section">
   <h2>ABOUT $ELP</h2>
   <p>
     This is not a project. This is a lesson.<br><br>
@@ -197,22 +162,16 @@ body {
 </div>
 
 <!-- TOKENOMICS -->
-<div class="section">
+<div class="section tokenomics">
   <h2>TOKENOMICS</h2>
-
-  <div class="tokenomics">
-    <div class="card">
-      Name: Exit Liquidity President<br><br>
-      Symbol: $ELP<br><br>
-      Supply: 1,000,000,000
-    </div>
-
-    <div class="card">
-      Tax: 0%<br><br>
-      Chain: Solana<br><br>
-      Liquidity: Burned
-    </div>
-  </div>
+  <p>
+    Name: Exit Liquidity President<br>
+    Symbol: $ELP<br>
+    Supply: 1,000,000,000<br>
+    Tax: 0%<br>
+    Chain: Solana<br>
+    Liquidity: Burned
+  </p>
 </div>
 
 <!-- MEMES -->
@@ -225,17 +184,6 @@ body {
     <img src="community.png">
     <img src="pepe.png">
   </div>
-</div>
-
-<!-- BUY -->
-<div class="section buy">
-  <h2>BUY $ELP</h2>
-  <img src="buy.png">
-</div>
-
-<!-- FOOTER -->
-<div class="footer">
-  © 2024 $ELP — Exit Liquidity President
 </div>
 
 </div>
