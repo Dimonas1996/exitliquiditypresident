@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>$ELP - Exit Liquidity President</title>
+<title>$ELP</title>
 
 <style>
 body {
@@ -28,14 +28,24 @@ body {
   width:120px;
 }
 
-/ HERO TEXT /
+/ HERO /
+.hero {
+  position:relative;
+}
+
+.hero img {
+  width:100%;
+}
+
 .hero-text {
-  text-align:center;
-  padding:20px;
+  position:absolute;
+  top:50%;
+  left:10%;
+  transform:translateY(-50%);
 }
 
 .hero-text h1 {
-  font-size:64px;
+  font-size:60px;
   font-weight:900;
   margin:0;
 }
@@ -46,87 +56,89 @@ body {
 
 / BUTTONS /
 .buttons {
-  text-align:center;
-  margin:30px 0;
+  margin-top:20px;
 }
 
-.buttons a {
+.btn {
   display:inline-block;
-  margin:10px;
-  padding:16px 40px;
-  text-decoration:none;
+  padding:14px 30px;
+  margin-right:10px;
   border-radius:10px;
+  text-decoration:none;
   font-weight:bold;
-  font-size:18px;
-  transition:0.3s;
 }
 
-/ BUY BUTTON /
 .buy-btn {
   background:#ff0000;
   color:white;
+  box-shadow:0 0 15px red;
 }
 
-.buy-btn:hover {
-  background:#cc0000;
-}
-
-/ TWITTER BUTTON /
 .twitter-btn {
-  border:2px solid #555;
+  border:2px solid #444;
   color:white;
-}
-
-.twitter-btn:hover {
-  background:#111;
-  border-color:#999;
-}
-
-/ TOP /
-.top {
-  display:grid;
-  grid-template-columns:2fr 1fr;
-}
-
-.top img {
-  width:100%;
-  display:block;
 }
 
 / MEMES /
 .memes {
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:12px;
-  padding:30px 20px;
+  gap:10px;
+  padding:20px;
 }
 
 .memes img {
   width:100%;
-  border-radius:12px;
+  border-radius:10px;
 }
 
-/ BUY SECTION /
-.buy {
+/ FOOTER /
+.footer {
+  border-top:1px solid #222;
+  margin-top:40px;
   padding:30px 20px;
+  text-align:center;
 }
 
-.buy img {
-  width:100%;
+.footer-logo {
+  margin-bottom:10px;
+}
+
+.footer-logo img {
+  width:80px;
+}
+
+.footer-text {
+  font-size:14px;
+  color:#aaa;
+  margin:10px 0;
+}
+
+.footer-social a {
+  margin:0 10px;
+  color:white;
+  text-decoration:none;
+  font-size:14px;
+}
+
+.footer-social a:hover {
+  color:red;
 }
 
 / MOBILE */
 @media(max-width:800px){
-  .top {
-    grid-template-columns:1fr;
-  }
-
-  .memes {
-    grid-template-columns:1fr 1fr;
+  .hero-text {
+    position:static;
+    transform:none;
+    padding:20px;
   }
 
   .hero-text h1 {
     font-size:36px;
+  }
+
+  .memes {
+    grid-template-columns:1fr 1fr;
   }
 }
 </style>
@@ -142,32 +154,19 @@ body {
   <img src="logo.png">
 </div>
 
-<!-- HERO TEXT -->
-<div class="hero-text">
-  <h1>
-    YOU ARE THE <span class="red">EXIT LIQUIDITY</span>
-  </h1>
-</div>
-
-<!-- BUTTONS -->
-<div class="buttons">
-
-  <!-- 👇 ČIA ĮDĖSI SAVO PUMP LINKĄ -->
-  <a href="PUT_YOUR_LINK_HERE" target="_blank" class="buy-btn">
-    BUY $ELP
-  </a>
-
-  <a href="https://x.com/elpcoin?s=21" target="_blank" class="twitter-btn">
-    TWITTER
-  </a>
-
-</div>
-
-<!-- TOP -->
-<div class="top">
+<!-- HERO -->
+<div class="hero">
   <img src="hero.png">
-  <div>
-    <img src="tokenomics.png">
+
+  <div class="hero-text">
+    <h1>
+      YOU ARE THE <span class="red">EXIT LIQUIDITY</span>
+    </h1>
+
+    <div class="buttons">
+      <a href="#" class="btn buy-btn">BUY $ELP</a>
+      <a href="https://x.com/elpcoin?s=21" target="_blank" class="btn twitter-btn">TWITTER</a>
+    </div>
   </div>
 </div>
 
@@ -179,9 +178,25 @@ body {
   <img src="pepe.png">
 </div>
 
-<!-- BUY IMAGE -->
-<div class="buy">
-  <img src="buy.png">
+<!-- FOOTER -->
+<div class="footer">
+
+  <div class="footer-logo">
+    <img src="logo.png">
+  </div>
+
+  <div class="footer-text">
+    $ELP — Exit Liquidity President
+  </div>
+
+  <div class="footer-social">
+    <a href="https://x.com/elpcoin?s=21" target="_blank">Twitter</a>
+  </div>
+
+  <div class="footer-text">
+    © 2024 $ELP. All rights reserved.
+  </div>
+
 </div>
 
 </div>
