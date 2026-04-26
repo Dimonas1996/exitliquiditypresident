@@ -11,7 +11,6 @@ body {
   background:black;
   color:white;
   font-family:Arial, sans-serif;
-  text-align:center;
 }
 
 /* WRAPPER /
@@ -22,22 +21,39 @@ body {
 
 / LOGO /
 .logo {
-  padding:30px 0 10px;
+  text-align:center;
+  padding:20px;
 }
 
 .logo img {
   width:110px;
 }
 
-/ HEADER TEXT /
-.header-text {
-  margin-bottom:20px;
+/ HERO /
+.hero {
+  position:relative;
 }
 
-.header-text h1 {
-  font-size:56px;
+.hero img {
+  width:100%;
+  display:block;
+  filter:brightness(0.6);
+}
+
+/ HERO TEXT /
+.hero-text {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  text-align:center;
+}
+
+.hero-text h1 {
+  font-size:70px;
   font-weight:900;
   margin:0;
+  text-shadow:0 0 20px rgba(255,0,0,0.8);
 }
 
 .red {
@@ -46,66 +62,85 @@ body {
 
 / BUTTONS /
 .buttons {
-  margin:20px 0 40px;
+  margin-top:25px;
 }
 
 .btn {
   display:inline-block;
-  padding:14px 35px;
-  margin:5px;
-  border-radius:10px;
+  padding:16px 40px;
+  margin:10px;
+  border-radius:12px;
   text-decoration:none;
   font-weight:bold;
-  font-size:16px;
+  font-size:18px;
+  transition:0.3s;
 }
 
 / BUY /
 .buy-btn {
   background:#ff0000;
   color:white;
-  box-shadow:0 0 12px red;
+  box-shadow:0 0 20px red;
+}
+
+.buy-btn:hover {
+  background:#cc0000;
+  box-shadow:0 0 30px red;
 }
 
 / TWITTER /
 .twitter-btn {
-  border:2px solid #444;
+  border:2px solid #555;
   color:white;
 }
 
-/ HERO IMAGE /
-.hero img {
-  width:100%;
+.twitter-btn:hover {
+  border-color:#aaa;
 }
 
 / MEMES /
 .memes {
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:10px;
-  padding:30px 20px;
+  gap:12px;
+  padding:40px 20px;
 }
 
 .memes img {
   width:100%;
-  border-radius:10px;
+  border-radius:12px;
+  transition:0.3s;
 }
 
-/ FOOTER TEXT /
-.footer {
-  padding:40px 20px;
-  font-size:20px;
-  font-weight:700;
-  color:#ccc;
+.memes img:hover {
+  transform:scale(1.05);
+}
+
+/ FINAL CTA /
+.final {
+  text-align:center;
+  padding:80px 20px;
+}
+
+.final h2 {
+  font-size:50px;
+  font-weight:900;
+  margin:0;
+  text-shadow:0 0 15px rgba(255,0,0,0.7);
 }
 
 / MOBILE */
 @media(max-width:800px){
-  .header-text h1 {
-    font-size:32px;
+  .hero-text h1 {
+    font-size:36px;
   }
 
   .memes {
     grid-template-columns:1fr 1fr;
+  }
+
+  .final h2 {
+    font-size:28px;
   }
 }
 </style>
@@ -121,22 +156,20 @@ body {
   <img src="logo.png">
 </div>
 
-<!-- HEADER -->
-<div class="header-text">
-  <h1>
-    YOU ARE THE <span class="red">EXIT LIQUIDITY</span>
-  </h1>
-</div>
-
-<!-- BUTTONS -->
-<div class="buttons">
-  <a href="#" class="btn buy-btn">BUY $ELP</a>
-  <a href="https://x.com/elpcoin?s=21" target="_blank" class="btn twitter-btn">TWITTER</a>
-</div>
-
 <!-- HERO -->
 <div class="hero">
   <img src="hero.png">
+
+  <div class="hero-text">
+    <h1>
+      YOU ARE THE <span class="red">EXIT LIQUIDITY</span>
+    </h1>
+
+    <div class="buttons">
+      <a href="#" class="btn buy-btn">BUY $ELP</a>
+      <a href="https://x.com/elpcoin?s=21" target="_blank" class="btn twitter-btn">TWITTER</a>
+    </div>
+  </div>
 </div>
 
 <!-- MEMES -->
@@ -147,9 +180,11 @@ body {
   <img src="pepe.png">
 </div>
 
-<!-- FOOTER -->
-<div class="footer">
-  YOU ARE THE EXIT LIQUIDITY
+<!-- FINAL -->
+<div class="final">
+  <h2>
+    YOU ARE THE <span class="red">EXIT LIQUIDITY</span>
+  </h2>
 </div>
 
 </div>
