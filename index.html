@@ -1,15 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>$ELP - Exit Liquidity President</title>
 
 <style>
 body {
   margin:0;
   background:black;
+  color:white;
+  font-family:Arial, sans-serif;
 }
 
-/* TOP */
+.wrapper {
+  max-width:1200px;
+  margin:auto;
+}
+
+/* LOGO /
+.logo {
+  text-align:center;
+  padding:20px;
+}
+
+.logo img {
+  width:120px;
+}
+
+/ HERO TEXT /
+.hero-text {
+  text-align:center;
+  padding:20px;
+}
+
+.hero-text h1 {
+  font-size:50px;
+  margin:0;
+}
+
+.red {
+  color:red;
+}
+
+/ BUTTONS /
+.buttons {
+  text-align:center;
+  margin:20px;
+}
+
+.buttons a {
+  display:inline-block;
+  margin:10px;
+  padding:15px 30px;
+  background:red;
+  color:white;
+  text-decoration:none;
+  border-radius:8px;
+  font-weight:bold;
+}
+
+/ TOP GRID /
 .top {
   display:grid;
   grid-template-columns: 2fr 1fr;
@@ -20,7 +71,7 @@ body {
   display:block;
 }
 
-/* MEMES */
+/ MEMES /
 .memes {
   display:grid;
   grid-template-columns: repeat(4,1fr);
@@ -33,17 +84,16 @@ body {
   border-radius:10px;
 }
 
-/* BUY */
+/ BUY /
 .buy {
-  display:grid;
-  grid-template-columns:1fr 1fr;
+  padding:20px;
 }
 
 .buy img {
   width:100%;
 }
 
-/* MOBILE */
+/ MOBILE */
 @media(max-width:800px){
   .top {
     grid-template-columns:1fr;
@@ -53,8 +103,8 @@ body {
     grid-template-columns:1fr 1fr;
   }
 
-  .buy {
-    grid-template-columns:1fr;
+  .hero-text h1 {
+    font-size:32px;
   }
 }
 </style>
@@ -63,17 +113,30 @@ body {
 
 <body>
 
-<!-- TOP -->
+<div class="wrapper">
+
+<div class="logo">
+  <img src="logo.png">
+</div>
+
+<div class="hero-text">
+  <h1>
+    YOU ARE THE <span class="red">EXIT LIQUIDITY</span>
+  </h1>
+</div>
+
+<div class="buttons">
+  <a href="#">BUY $ELP</a>
+  <a href="https://x.com/elpcoin?s=21" target="_blank">TWITTER</a>
+</div>
+
 <div class="top">
   <img src="hero.png">
-
   <div>
-    <img src="logo.png">
     <img src="tokenomics.png">
   </div>
 </div>
 
-<!-- MEMES -->
 <div class="memes">
   <img src="liquidity.png">
   <img src="final.png">
@@ -81,10 +144,10 @@ body {
   <img src="pepe.png">
 </div>
 
-<!-- BUY -->
 <div class="buy">
   <img src="buy.png">
-  <img src="buy.png">
+</div>
+
 </div>
 
 </body>
