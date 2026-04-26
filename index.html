@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 
 <title>$ELP</title>
 
@@ -14,14 +14,14 @@ body {
   background:#000;
   color:#fff;
   font-family:'Inter', sans-serif;
-  text-align:center;
 }
 
 /* WRAPPER /
 .wrapper {
-  max-width:1100px;
+  max-width:900px;
   margin:auto;
   padding:20px;
+  text-align:center;
 }
 
 / LOGO /
@@ -30,12 +30,11 @@ body {
   margin-bottom:20px;
 }
 
-/ HERO TEXT /
+/ HERO /
 .hero h1 {
-  font-size:64px;
+  font-size:60px;
   font-weight:900;
   text-transform:uppercase;
-  letter-spacing:2px;
   margin:0;
 }
 
@@ -50,41 +49,39 @@ body {
 
 .btn {
   display:inline-block;
-  padding:16px 40px;
-  margin:10px;
-  border-radius:12px;
+  padding:15px 35px;
+  margin:8px;
+  border-radius:10px;
   text-decoration:none;
   font-weight:700;
-  font-size:18px;
 }
 
 .buy-btn {
   background:#ff0000;
-  color:white;
-  box-shadow:0 0 25px rgba(255,0,0,0.8);
+  color:#fff;
+  box-shadow:0 0 20px red;
 }
 
 .twitter-btn {
   border:2px solid #444;
-  color:white;
+  color:#fff;
 }
 
-/ CARD STYLE /
+/ CARDS /
 .card {
-  margin:40px auto;
-  padding:30px;
-  max-width:700px;
   background:#0a0a0a;
-  border:1px solid rgba(255,0,0,0.4);
-  border-radius:14px;
+  border:1px solid rgba(255,0,0,0.5);
+  border-radius:12px;
+  padding:25px;
+  margin:30px 0;
 }
 
 / TITLES /
 .card h2 {
-  font-size:28px;
+  font-size:26px;
   font-weight:900;
-  margin-bottom:20px;
   text-transform:uppercase;
+  margin-bottom:15px;
 }
 
 .card h2 span {
@@ -93,50 +90,32 @@ body {
 
 / TEXT /
 .card p {
-  font-size:18px;
   color:#ccc;
+  font-size:16px;
   line-height:1.7;
 }
 
-/ TOKENOMICS /
-.tokenomics p {
-  line-height:2;
-}
-
-/ IMAGES WITH RED FRAME /
+/ IMAGES /
 .image-box {
-  border:2px solid rgba(255,0,0,0.5);
-  border-radius:12px;
-  padding:6px;
-  margin:10px;
-}
-
-/ MEMES GRID /
-.memes {
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:12px;
-  margin-top:40px;
-}
-
-.memes img {
-  width:100%;
+  border:2px solid rgba(255,0,0,0.6);
   border-radius:10px;
+  padding:5px;
+  margin:10px 0;
 }
 
-/ BUY IMAGE /
-.buy {
-  margin-top:50px;
-}
-
-.buy img {
+.image-box img {
   width:100%;
-  max-width:700px;
+  border-radius:8px;
+}
+
+/ MEMES /
+.memes {
+  margin-top:40px;
 }
 
 / FOOTER /
 .footer {
-  margin-top:60px;
+  margin-top:50px;
   color:#555;
   font-size:14px;
 }
@@ -144,11 +123,7 @@ body {
 / MOBILE */
 @media(max-width:800px){
   .hero h1 {
-    font-size:32px;
-  }
-
-  .memes {
-    grid-template-columns:1fr 1fr;
+    font-size:30px;
   }
 }
 </style>
@@ -188,7 +163,7 @@ body {
 </div>
 
 <!-- TOKENOMICS -->
-<div class="card tokenomics">
+<div class="card">
   <h2>TOKENOMICS</h2>
   <p>
     Name: Exit Liquidity President<br>
@@ -209,15 +184,13 @@ body {
 </div>
 
 <!-- BUY -->
-<div class="buy">
-  <div class="image-box">
-    <img src="buy.png">
-  </div>
+<div class="image-box">
+  <img src="buy.png">
 </div>
 
 <!-- FOOTER -->
 <div class="footer">
-  © 2024 $ELP — Exit Liquidity President
+  © 2024 $ELP
 </div>
 
 </div>
