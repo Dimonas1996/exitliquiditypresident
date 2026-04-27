@@ -9,7 +9,7 @@ body {
   margin:0;
   background:black;
   color:white;
-  font-family:Arial;
+  font-family:Arial, sans-serif;
   text-align:center;
 }
 
@@ -19,18 +19,46 @@ body {
   margin-top:20px;
 }
 
-/ TEKSTAS /
+/ HERO TEXT /
 h1 {
-  font-size:36px;
+  font-size:38px;
   font-weight:900;
-  margin:20px 0;
+  margin:25px 0;
+  line-height:1.2;
 }
 
 .red {
-  color:red;
+  color:#ff0000;
 }
 
-/ NUOTRAUKOS RĖMAS /
+/ SECTION /
+.section {
+  max-width:500px;
+  margin:30px auto;
+}
+
+/ TITLES /
+h2 {
+  font-size:22px;
+  font-weight:800;
+  margin-bottom:10px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+/ TEXT /
+p {
+  font-size:16px;
+  color:#ccc;
+  line-height:1.7;
+}
+
+/ TOKENOMICS /
+.tokenomics p {
+  line-height:1.9;
+}
+
+/ IMAGES /
 img {
   width:100%;
   border:2px solid red;
@@ -40,16 +68,11 @@ img {
   margin:10px 0;
 }
 
-/ BLOKAI /
-.section {
-  max-width:500px;
-  margin:30px auto;
-}
-
 / FOOTER */
 .footer {
   margin:40px 0;
   color:#aaa;
+  font-size:14px;
 }
 
 .footer span {
@@ -66,12 +89,12 @@ img {
   <img src="logo.png">
 </div>
 
-<!-- TEKSTAS -->
+<!-- HERO TEXT -->
 <h1>
   YOU ARE THE <span class="red">EXIT LIQUIDITY</span>
 </h1>
 
-<!-- HERO -->
+<!-- HERO IMAGE -->
 <div class="section">
   <img src="hero.png">
 </div>
@@ -88,7 +111,7 @@ img {
 </div>
 
 <!-- TOKENOMICS -->
-<div class="section">
+<div class="section tokenomics">
   <h2>TOKENOMICS</h2>
   <p>
     Name: Exit Liquidity President<br>
