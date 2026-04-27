@@ -14,6 +14,7 @@ body {
   background:#000;
   color:#fff;
   font-family:'Inter', sans-serif;
+  text-align:center;
 }
 
 /* WRAPPER /
@@ -21,7 +22,6 @@ body {
   max-width:900px;
   margin:auto;
   padding:20px;
-  text-align:center;
 }
 
 / LOGO /
@@ -35,8 +35,8 @@ body {
   font-size:52px;
   font-weight:900;
   text-transform:uppercase;
-  letter-spacing:2px;
   margin:20px 0;
+  letter-spacing:2px;
 }
 
 .hero span {
@@ -80,7 +80,7 @@ body {
   color:#ff0000;
 }
 
-/ CARD /
+/ CARDS /
 .card {
   max-width:650px;
   margin:40px auto;
@@ -109,12 +109,20 @@ body {
   line-height:1.8;
 }
 
-/ IMAGES /
+/ IMAGE FRAME /
 .image-box {
-  border:2px solid rgba(255,0,0,0.6);
-  border-radius:12px;
+  border:2px solid rgba(255,0,0,0.7);
+  border-radius:14px;
   padding:6px;
-  margin:15px 0;
+  margin:15px auto;
+  max-width:700px;
+  box-shadow:0 0 20px rgba(255,0,0,0.3);
+  transition:0.3s;
+}
+
+.image-box:hover {
+  box-shadow:0 0 35px rgba(255,0,0,0.8);
+  transform:scale(1.02);
 }
 
 .image-box img {
@@ -122,16 +130,31 @@ body {
   border-radius:10px;
 }
 
-/ MEMES /
-.memes {
-  margin-top:40px;
-}
-
 / FOOTER /
 .footer {
-  margin-top:50px;
-  color:#555;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:15px;
+  margin-top:60px;
+  color:#aaa;
   font-size:14px;
+}
+
+.footer::before,
+.footer::after {
+  content:"";
+  flex:1;
+  height:1px;
+  background:linear-gradient(to right, transparent, red);
+}
+
+.footer::after {
+  background:linear-gradient(to left, transparent, red);
+}
+
+.footer span {
+  color:#ff0000;
 }
 
 / MOBILE */
@@ -190,12 +213,10 @@ body {
 </div>
 
 <!-- MEMES -->
-<div class="memes">
-  <div class="image-box"><img src="liquidity.png"></div>
-  <div class="image-box"><img src="final.png"></div>
-  <div class="image-box"><img src="community.png"></div>
-  <div class="image-box"><img src="pepe.png"></div>
-</div>
+<div class="image-box"><img src="liquidity.png"></div>
+<div class="image-box"><img src="final.png"></div>
+<div class="image-box"><img src="community.png"></div>
+<div class="image-box"><img src="pepe.png"></div>
 
 <!-- BUY -->
 <div class="image-box">
@@ -204,7 +225,7 @@ body {
 
 <!-- FOOTER -->
 <div class="footer">
-  © 2024 $ELP — Exit Liquidity President
+  © 2024 <span>$ELP</span> — Exit Liquidity President
 </div>
 
 </div>
