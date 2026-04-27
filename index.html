@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
 
 <title>$ELP</title>
 
@@ -26,16 +26,17 @@ body {
 
 / LOGO /
 .logo img {
-  width:100px;
+  width:110px;
   margin-bottom:20px;
 }
 
 / HERO /
 .hero h1 {
-  font-size:60px;
+  font-size:52px;
   font-weight:900;
   text-transform:uppercase;
-  margin:0;
+  letter-spacing:2px;
+  margin:20px 0;
 }
 
 .hero span {
@@ -44,22 +45,29 @@ body {
 
 / BUTTONS /
 .buttons {
-  margin-top:25px;
+  margin-top:20px;
 }
 
 .btn {
   display:inline-block;
-  padding:15px 35px;
+  padding:14px 32px;
   margin:8px;
   border-radius:10px;
-  text-decoration:none;
   font-weight:700;
+  text-decoration:none;
+  font-size:16px;
+  transition:0.3s;
 }
 
 .buy-btn {
   background:#ff0000;
   color:#fff;
-  box-shadow:0 0 20px red;
+  box-shadow:0 0 20px rgba(255,0,0,0.7);
+}
+
+.buy-btn:hover {
+  transform:scale(1.08);
+  box-shadow:0 0 35px rgba(255,0,0,1);
 }
 
 .twitter-btn {
@@ -67,21 +75,27 @@ body {
   color:#fff;
 }
 
-/ CARDS /
+.twitter-btn:hover {
+  border-color:#ff0000;
+  color:#ff0000;
+}
+
+/ CARD /
 .card {
+  max-width:650px;
+  margin:40px auto;
+  padding:30px;
   background:#0a0a0a;
-  border:1px solid rgba(255,0,0,0.5);
-  border-radius:12px;
-  padding:25px;
-  margin:30px 0;
+  border:1px solid rgba(255,0,0,0.4);
+  border-radius:14px;
 }
 
 / TITLES /
 .card h2 {
   font-size:26px;
   font-weight:900;
-  text-transform:uppercase;
   margin-bottom:15px;
+  text-transform:uppercase;
 }
 
 .card h2 span {
@@ -90,22 +104,22 @@ body {
 
 / TEXT /
 .card p {
+  font-size:17px;
   color:#ccc;
-  font-size:16px;
-  line-height:1.7;
+  line-height:1.8;
 }
 
 / IMAGES /
 .image-box {
   border:2px solid rgba(255,0,0,0.6);
-  border-radius:10px;
-  padding:5px;
-  margin:10px 0;
+  border-radius:12px;
+  padding:6px;
+  margin:15px 0;
 }
 
 .image-box img {
   width:100%;
-  border-radius:8px;
+  border-radius:10px;
 }
 
 / MEMES /
@@ -190,7 +204,7 @@ body {
 
 <!-- FOOTER -->
 <div class="footer">
-  © 2024 $ELP
+  © 2024 $ELP — Exit Liquidity President
 </div>
 
 </div>
