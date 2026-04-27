@@ -7,24 +7,24 @@
 <style>
 body {
   margin:0;
-  background:black;
-  color:white;
+  background:#000;
+  color:#fff;
   font-family:Arial, sans-serif;
   text-align:center;
 }
 
 /* LOGO /
 .logo img {
-  width:120px;
-  margin-top:20px;
+  width:130px;
+  margin:20px 0;
 }
 
 / HERO TEXT /
 h1 {
-  font-size:38px;
+  font-size:40px;
   font-weight:900;
-  margin:25px 0;
   line-height:1.2;
+  margin:20px;
 }
 
 .red {
@@ -33,53 +33,52 @@ h1 {
 
 / SECTION /
 .section {
-  max-width:500px;
-  margin:30px auto;
+  max-width:520px;
+  margin:40px auto;
 }
 
 / TITLES /
 h2 {
   font-size:22px;
-  font-weight:800;
-  margin-bottom:10px;
+  margin-bottom:15px;
   text-transform:uppercase;
-  letter-spacing:1px;
 }
 
 / TEXT /
 p {
-  font-size:16px;
   color:#ccc;
-  line-height:1.7;
+  line-height:1.8;
 }
 
-/ TOKENOMICS /
-.tokenomics p {
-  line-height:1.9;
-}
-
-/ IMAGES /
-img {
-  width:100%;
+/ IMAGE STYLE /
+.img {
   border:2px solid red;
-  border-radius:12px;
-  padding:4px;
-  box-shadow:0 0 15px red;
-  margin:10px 0;
+  border-radius:14px;
+  padding:6px;
+  box-shadow:0 0 25px red;
+  margin:20px 0;
+}
+
+.img img {
+  width:100%;
+  border-radius:10px;
+}
+
+/ STRONG TEXT (TOKENOMICS) /
+strong {
+  color:#ff0000;
 }
 
 / FOOTER */
 .footer {
   margin:40px 0;
   color:#aaa;
-  font-size:14px;
 }
 
 .footer span {
   color:red;
 }
 </style>
-
 </head>
 
 <body>
@@ -95,7 +94,7 @@ img {
 </h1>
 
 <!-- HERO IMAGE -->
-<div class="section">
+<div class="section img">
   <img src="hero.png">
 </div>
 
@@ -111,28 +110,37 @@ img {
 </div>
 
 <!-- TOKENOMICS -->
-<div class="section tokenomics">
+<div class="section">
   <h2>TOKENOMICS</h2>
   <p>
-    Name: Exit Liquidity President<br>
-    Symbol: $ELP<br>
-    Supply: 1,000,000,000<br>
-    Tax: 0%<br>
-    Chain: Solana<br>
-    Liquidity: Burned
+    Name: <strong>Exit Liquidity President</strong><br>
+    Symbol: <strong>$ELP</strong><br>
+    Supply: <strong>1,000,000,000</strong><br>
+    Tax: <strong>0%</strong><br>
+    Chain: <strong>Solana</strong><br>
+    Liquidity: <strong>Burned</strong>
   </p>
 </div>
 
 <!-- MEMES -->
-<div class="section">
+<div class="section img">
   <img src="liquidity.png">
+</div>
+
+<div class="section img">
   <img src="final.png">
+</div>
+
+<div class="section img">
   <img src="community.png">
+</div>
+
+<div class="section img">
   <img src="pepe.png">
 </div>
 
 <!-- BUY -->
-<div class="section">
+<div class="section img">
   <img src="buy.png">
 </div>
 
