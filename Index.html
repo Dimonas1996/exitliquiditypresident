@@ -17,26 +17,17 @@ body {
   text-align:center;
 }
 
-/* WRAPPER /
 .wrapper {
   max-width:900px;
   margin:auto;
   padding:20px;
 }
 
-/ LOGO /
-.logo img {
-  width:110px;
-  margin-bottom:20px;
-}
-
-/ HERO /
+/* HERO /
 .hero h1 {
-  font-size:52px;
+  font-size:50px;
   font-weight:900;
   text-transform:uppercase;
-  margin:20px 0;
-  letter-spacing:2px;
 }
 
 .hero span {
@@ -50,24 +41,17 @@ body {
 
 .btn {
   display:inline-block;
-  padding:14px 32px;
+  padding:14px 30px;
   margin:8px;
   border-radius:10px;
-  font-weight:700;
   text-decoration:none;
-  font-size:16px;
-  transition:0.3s;
+  font-weight:700;
 }
 
 .buy-btn {
   background:#ff0000;
   color:#fff;
-  box-shadow:0 0 20px rgba(255,0,0,0.7);
-}
-
-.buy-btn:hover {
-  transform:scale(1.08);
-  box-shadow:0 0 35px rgba(255,0,0,1);
+  box-shadow:0 0 20px red;
 }
 
 .twitter-btn {
@@ -75,54 +59,29 @@ body {
   color:#fff;
 }
 
-.twitter-btn:hover {
-  border-color:#ff0000;
-  color:#ff0000;
-}
-
 / CARDS /
 .card {
-  max-width:650px;
+  max-width:600px;
   margin:40px auto;
-  padding:30px;
+  padding:25px;
   background:#0a0a0a;
   border:1px solid rgba(255,0,0,0.4);
-  border-radius:14px;
-}
-
-/ TITLES /
-.card h2 {
-  font-size:26px;
-  font-weight:900;
-  margin-bottom:15px;
-  text-transform:uppercase;
-}
-
-.card h2 span {
-  color:#ff0000;
+  border-radius:12px;
 }
 
 / TEXT /
 .card p {
-  font-size:17px;
   color:#ccc;
-  line-height:1.8;
+  line-height:1.7;
 }
 
 / IMAGE FRAME /
 .image-box {
-  border:2px solid rgba(255,0,0,0.7);
-  border-radius:14px;
+  border:2px solid rgba(255,0,0,0.6);
+  border-radius:12px;
   padding:6px;
-  margin:15px auto;
+  margin:20px auto;
   max-width:700px;
-  box-shadow:0 0 20px rgba(255,0,0,0.3);
-  transition:0.3s;
-}
-
-.image-box:hover {
-  box-shadow:0 0 35px rgba(255,0,0,0.8);
-  transform:scale(1.02);
 }
 
 .image-box img {
@@ -130,7 +89,7 @@ body {
   border-radius:10px;
 }
 
-/ FOOTER /
+/ FOOTER */
 .footer {
   display:flex;
   align-items:center;
@@ -138,7 +97,6 @@ body {
   gap:15px;
   margin-top:60px;
   color:#aaa;
-  font-size:14px;
 }
 
 .footer::before,
@@ -154,14 +112,7 @@ body {
 }
 
 .footer span {
-  color:#ff0000;
-}
-
-/ MOBILE */
-@media(max-width:800px){
-  .hero h1 {
-    font-size:30px;
-  }
+  color:red;
 }
 </style>
 
@@ -171,16 +122,8 @@ body {
 
 <div class="wrapper">
 
-<!-- LOGO -->
-<div class="logo">
-  <img src="logo.png">
-</div>
-
-<!-- HERO -->
 <div class="hero">
-  <h1>
-    YOU ARE THE <span>EXIT LIQUIDITY</span>
-  </h1>
+  <h1>YOU ARE THE <span>EXIT LIQUIDITY</span></h1>
 
   <div class="buttons">
     <a href="#" class="btn buy-btn">BUY $ELP</a>
@@ -188,9 +131,8 @@ body {
   </div>
 </div>
 
-<!-- ABOUT -->
 <div class="card">
-  <h2>ABOUT <span>$ELP</span></h2>
+  <h2>ABOUT $ELP</h2>
   <p>
     This is not a project. This is a lesson.<br><br>
     They make the money.<br>
@@ -199,7 +141,6 @@ body {
   </p>
 </div>
 
-<!-- TOKENOMICS -->
 <div class="card">
   <h2>TOKENOMICS</h2>
   <p>
@@ -212,18 +153,15 @@ body {
   </p>
 </div>
 
-<!-- MEMES -->
 <div class="image-box"><img src="liquidity.png"></div>
 <div class="image-box"><img src="final.png"></div>
 <div class="image-box"><img src="community.png"></div>
 <div class="image-box"><img src="pepe.png"></div>
 
-<!-- BUY -->
 <div class="image-box">
   <img src="buy.png">
 </div>
 
-<!-- FOOTER -->
 <div class="footer">
   © 2024 <span>$ELP</span> — Exit Liquidity President
 </div>
