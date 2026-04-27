@@ -1,4 +1,3 @@
-<h1 style="color:red;">TEST</h1>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,58 +15,82 @@ body {
 
 /* LOGO /
 .logo img {
-  width:130px;
-  margin:20px 0;
+  width:140px;
+  margin:30px 0;
 }
 
 / HERO TEXT /
 h1 {
-  font-size:40px;
+  font-size:44px;
   font-weight:900;
-  line-height:1.2;
-  margin:20px;
+  text-transform:uppercase;
+  margin:20px 0;
 }
 
 .red {
   color:#ff0000;
+  text-shadow:0 0 20px red;
 }
 
-/ SECTION /
-.section {
+/ BUTTONS (BUY / TWITTER) /
+.buttons {
+  margin:25px 0;
+}
+
+.btn {
+  display:inline-block;
+  padding:12px 30px;
+  margin:10px;
+  border:2px solid red;
+  border-radius:10px;
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+  box-shadow:0 0 15px red;
+}
+
+.btn:hover {
+  background:red;
+}
+
+/ SECTION BOX (ABOUT + TOKENOMICS) /
+.box {
   max-width:520px;
   margin:40px auto;
+  padding:25px;
+  border:2px solid red;
+  border-radius:15px;
+  box-shadow:0 0 25px red;
 }
 
-/ TITLES /
 h2 {
-  font-size:22px;
   margin-bottom:15px;
-  text-transform:uppercase;
 }
 
 / TEXT /
 p {
   color:#ccc;
-  line-height:1.8;
+  line-height:1.7;
 }
 
-/ IMAGE STYLE /
+/ TOKENOMICS highlight /
+strong {
+  color:#ff0000;
+}
+
+/ IMAGE FRAME /
 .img {
+  max-width:520px;
+  margin:25px auto;
+  padding:6px;
   border:2px solid red;
   border-radius:14px;
-  padding:6px;
   box-shadow:0 0 25px red;
-  margin:20px 0;
 }
 
 .img img {
   width:100%;
   border-radius:10px;
-}
-
-/ STRONG TEXT /
-strong {
-  color:#ff0000;
 }
 
 / FOOTER */
@@ -89,18 +112,19 @@ strong {
   <img src="logo.png">
 </div>
 
-<!-- HERO TEXT -->
+<!-- HERO -->
 <h1>
   YOU ARE THE <span class="red">EXIT LIQUIDITY</span>
 </h1>
 
-<!-- HERO IMAGE -->
-<div class="section img">
-  <img src="hero.png">
+<!-- BUTTONS -->
+<div class="buttons">
+  <a href="#" class="btn">BUY $ELP</a>
+  <a href="#" class="btn">TWITTER</a>
 </div>
 
 <!-- ABOUT -->
-<div class="section">
+<div class="box">
   <h2>ABOUT $ELP</h2>
   <p>
     This is not a project. This is a lesson.<br><br>
@@ -111,7 +135,7 @@ strong {
 </div>
 
 <!-- TOKENOMICS -->
-<div class="section">
+<div class="box">
   <h2>TOKENOMICS</h2>
   <p>
     Name: <strong>Exit Liquidity President</strong><br>
@@ -123,27 +147,15 @@ strong {
   </p>
 </div>
 
-<!-- MEMES -->
-<div class="section img">
-  <img src="liquidity.png">
-</div>
-
-<div class="section img">
-  <img src="final.png">
-</div>
-
-<div class="section img">
-  <img src="community.png">
-</div>
-
-<div class="section img">
-  <img src="pepe.png">
-</div>
+<!-- IMAGES -->
+<div class="img"><img src="hero.png"></div>
+<div class="img"><img src="liquidity.png"></div>
+<div class="img"><img src="final.png"></div>
+<div class="img"><img src="community.png"></div>
+<div class="img"><img src="pepe.png"></div>
 
 <!-- BUY -->
-<div class="section img">
-  <img src="buy.png">
-</div>
+<div class="img"><img src="buy.png"></div>
 
 <!-- FOOTER -->
 <div class="footer">
