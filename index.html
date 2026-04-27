@@ -1,37 +1,162 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Logo Test</title>
+<title>$ELP</title>
 
 <style>
 body {
   margin:0;
-  background:black;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  height:100vh;
+  background:#000;
+  color:#fff;
+  font-family:'Special Elite', monospace;
+  text-align:center;
 }
 
-/* LOGO /
-img {
+.logo img {
   width:220px;
-  box-shadow:0 0 20px red;
-  transition:0.3s;
+  margin:30px 0;
 }
 
-/ HOVER */
-img:hover {
-  transform:scale(1.1);
-  box-shadow:0 0 40px red;
+h1 {
+  font-size:44px;
+  font-weight:900;
+  text-transform:uppercase;
+}
+
+.red {
+  color:#ff0000;
+  text-shadow:0 0 20px red;
+}
+
+.box {
+  max-width:520px;
+  margin:40px auto;
+  padding:25px;
+  border:2px solid red;
+  border-radius:15px;
+  box-shadow:0 0 25px red;
+}
+
+.img {
+  max-width:520px;
+  margin:25px auto;
+  padding:6px;
+  border:2px solid red;
+  border-radius:14px;
+  box-shadow:0 0 25px red;
+}
+
+.img img {
+  width:100%;
+  border-radius:10px;
+}
+
+p {
+  color:#ccc;
+  line-height:1.7;
+}
+
+strong {
+  color:#ff0000;
+}
+
+.footer {
+  margin:40px 0;
+  color:#aaa;
+}
+
+.footer span {
+  color:red;
 }
 </style>
 </head>
 
 <body>
 
-<img src="logo.png">
+<div style="position:relative; display:inline-block;">
+
+  <img src="logo.png" style="width:220px;">
+
+  <div style="
+    position:absolute;
+    top:42%;
+    left:55%;
+    width:0;
+    height:4px;
+    background:red;
+    box-shadow:0 0 15px red;
+    animation:laser1 1s infinite;
+  "></div>
+
+  <div style="
+    position:absolute;
+    top:42%;
+    left:55%;
+    width:0;
+    height:4px;
+    background:red;
+    box-shadow:0 0 15px red;
+    animation:laser2 1s infinite;
+  "></div>
+
+</div>
+
+<style>
+@keyframes laser1 {
+  0% { width:0; opacity:0; transform:rotate(5deg); }
+  50% { width:220px; opacity:1; }
+  100% { width:0; opacity:0; }
+}
+
+@keyframes laser2 {
+  0% { width:0; opacity:0; transform:rotate(-5deg); }
+  50% { width:220px; opacity:1; }
+  100% { width:0; opacity:0; }
+}
+</style>
+<div style="margin:5px 0 30px;">
+  <a href="https://pump.fun/..." style="padding:12px 26px; margin:10px; border:2px solid red; color:white; text-decoration:none; display:inline-block;">BUY $ELP</a>
+  
+  <a href="https://x.com/elpcoin?s=21" style="padding:12px 26px; margin:10px; border:2px solid red; color:white; text-decoration:none; display:inline-block;">TWITTER</a>
+</div>
+<h1>
+  YOU ARE THE <span class="red">EXIT LIQUIDITY</span>
+</h1>
+
+<div class="box">
+  <h2>ABOUT $ELP</h2>
+  <p>
+    This is not a project. This is a lesson.<br><br>
+    They make the money.<br>
+    You exit the liquidity.<br>
+    Every single time.
+  </p>
+</div>
+
+<div class="box">
+  <h2>TOKENOMICS</h2>
+  <p>
+    Name: <strong>Exit Liquidity President</strong><br>
+    Symbol: <strong>$ELP</strong><br>
+    Supply: <strong>1,000,000,000</strong><br>
+    Tax: <strong>0%</strong><br>
+    Chain: <strong>Solana</strong><br>
+    Liquidity: <strong>Burned</strong>
+  </p>
+</div>
+
+<div class="img"><img src="hero.png"></div>
+<div class="img"><img src="liquidity.png"></div>
+<div class="img"><img src="final.png"></div>
+<div class="img"><img src="community.png"></div>
+<div class="img"><img src="pepe.png"></div>
+
+<div class="img"><img src="buy.png"></div>
+
+<div class="footer">
+  © 2024 <span>$ELP</span> — Exit Liquidity President
+</div>
 
 </body>
 </html>
