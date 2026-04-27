@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>$ELP</title>
 
 <style>
@@ -11,30 +9,29 @@ body {
   margin:0;
   background:black;
   color:white;
-  font-family:Arial, sans-serif;
+  font-family:Arial;
   text-align:center;
 }
 
-/* LOGO /
-.logo img {
-  width:110px;
-  margin-top:20px;
+/* HERO IMAGE /
+.hero img {
+  width:100%;
 }
 
-/ HERO /
+/ TEXT /
 h1 {
-  font-size:50px;
+  font-size:42px;
   font-weight:900;
   margin:20px 0;
 }
 
 .red {
-  color:#ff0000;
+  color:red;
 }
 
 / BUTTONS /
 .buttons {
-  margin:20px 0;
+  margin:20px;
 }
 
 .btn {
@@ -47,7 +44,7 @@ h1 {
 }
 
 .buy {
-  background:#ff0000;
+  background:red;
   color:white;
   box-shadow:0 0 20px red;
 }
@@ -57,40 +54,23 @@ h1 {
   color:white;
 }
 
-/ GLOW BOX /
+/ BOX /
 .box {
   margin:30px auto;
   padding:25px;
-  max-width:550px;
+  max-width:500px;
   border-radius:12px;
-
   border:2px solid red;
-  box-shadow:
-    0 0 10px red,
-    0 0 25px rgba(255,0,0,0.6);
-}
-
-/ TEXT /
-.box p {
-  color:#ccc;
-  line-height:1.7;
-}
-
-/ IMAGE GRID /
-.grid {
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
+  box-shadow:0 0 25px red;
 }
 
 / IMAGE FRAME /
 .img-box {
-  width:150px;
-  margin:10px;
+  margin:15px;
   border:2px solid red;
   border-radius:12px;
   padding:5px;
-  box-shadow:0 0 15px red;
+  box-shadow:0 0 20px red;
 }
 
 .img-box img {
@@ -98,65 +78,38 @@ h1 {
   border-radius:10px;
 }
 
-/ BUY IMAGE /
-.buy-box {
-  max-width:600px;
-  margin:30px auto;
-  border:2px solid red;
-  border-radius:12px;
-  padding:5px;
-  box-shadow:0 0 20px red;
-}
-
-.buy-box img {
-  width:100%;
-  border-radius:10px;
+/ GRID /
+.grid {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
 }
 
 / FOOTER */
 .footer {
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:15px;
   margin:40px 0;
   color:#aaa;
 }
-
-.footer::before,
-.footer::after {
-  content:"";
-  flex:1;
-  height:1px;
-  background:linear-gradient(to right, transparent, red);
-}
-
-.footer::after {
-  background:linear-gradient(to left, transparent, red);
-}
-
 .footer span {
   color:red;
 }
 </style>
-
 </head>
 
 <body>
 
-<!-- LOGO -->
-<div class="logo">
-  <img src="logo.png">
+<!-- HERO -->
+<div class="hero">
+  <img src="hero.png">
 </div>
 
-<!-- HERO -->
 <h1>
   YOU ARE THE <span class="red">EXIT LIQUIDITY</span>
 </h1>
 
 <div class="buttons">
   <a href="#" class="btn buy">BUY $ELP</a>
-  <a href="https://x.com/elpcoin?s=21" target="_blank" class="btn twitter">TWITTER</a>
+  <a href="https://x.com/elpcoin?s=21" class="btn twitter">TWITTER</a>
 </div>
 
 <!-- ABOUT -->
@@ -191,8 +144,8 @@ h1 {
   <div class="img-box"><img src="pepe.png"></div>
 </div>
 
-<!-- BUY -->
-<div class="buy-box">
+<!-- BUY IMAGE -->
+<div class="img-box">
   <img src="buy.png">
 </div>
 
