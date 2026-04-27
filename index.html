@@ -4,94 +4,111 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
-
 <title>$ELP</title>
 
 <style>
 body {
   margin:0;
-  background:#000;
-  color:#fff;
-  font-family:'Inter', sans-serif;
+  background:black;
+  color:white;
+  font-family:Arial, sans-serif;
   text-align:center;
 }
 
-/* WRAPPER /
-.wrapper {
-  max-width:900px;
-  margin:auto;
-  padding:20px;
-}
-
-/ LOGO /
+/* LOGO /
 .logo img {
-  width:120px;
-  margin-bottom:20px;
+  width:110px;
+  margin-top:20px;
 }
 
 / HERO /
-.hero h1 {
-  font-size:48px;
+h1 {
+  font-size:50px;
   font-weight:900;
-  text-transform:uppercase;
+  margin:20px 0;
 }
 
-.hero span {
+.red {
   color:#ff0000;
 }
 
 / BUTTONS /
 .buttons {
-  margin-top:20px;
+  margin:20px 0;
 }
 
 .btn {
   display:inline-block;
   padding:14px 30px;
-  margin:8px;
+  margin:10px;
   border-radius:10px;
+  font-weight:bold;
   text-decoration:none;
-  font-weight:700;
 }
 
-.buy-btn {
+.buy {
   background:#ff0000;
-  color:#fff;
+  color:white;
   box-shadow:0 0 20px red;
 }
 
-.twitter-btn {
-  border:2px solid #444;
-  color:#fff;
+.twitter {
+  border:2px solid white;
+  color:white;
 }
 
-/ CARDS /
-.card {
-  max-width:600px;
-  margin:40px auto;
+/ GLOW BOX /
+.box {
+  margin:30px auto;
   padding:25px;
-  background:#0a0a0a;
-  border:1px solid rgba(255,0,0,0.4);
+  max-width:550px;
   border-radius:12px;
+
+  border:2px solid red;
+  box-shadow:
+    0 0 10px red,
+    0 0 25px rgba(255,0,0,0.6);
 }
 
 / TEXT /
-.card p {
+.box p {
   color:#ccc;
   line-height:1.7;
 }
 
-/ IMAGE FRAME /
-.image-box {
-  border:2px solid rgba(255,0,0,0.6);
-  border-radius:12px;
-  padding:6px;
-  margin:20px auto;
-  max-width:700px;
+/ IMAGE GRID /
+.grid {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
 }
 
-.image-box img {
+/ IMAGE FRAME /
+.img-box {
+  width:150px;
+  margin:10px;
+  border:2px solid red;
+  border-radius:12px;
+  padding:5px;
+  box-shadow:0 0 15px red;
+}
+
+.img-box img {
+  width:100%;
+  border-radius:10px;
+}
+
+/ BUY IMAGE /
+.buy-box {
+  max-width:600px;
+  margin:30px auto;
+  border:2px solid red;
+  border-radius:12px;
+  padding:5px;
+  box-shadow:0 0 20px red;
+}
+
+.buy-box img {
   width:100%;
   border-radius:10px;
 }
@@ -102,7 +119,7 @@ body {
   align-items:center;
   justify-content:center;
   gap:15px;
-  margin-top:60px;
+  margin:40px 0;
   color:#aaa;
 }
 
@@ -127,25 +144,23 @@ body {
 
 <body>
 
-<div class="wrapper">
-
 <!-- LOGO -->
 <div class="logo">
   <img src="logo.png">
 </div>
 
 <!-- HERO -->
-<div class="hero">
-  <h1>YOU ARE THE <span>EXIT LIQUIDITY</span></h1>
+<h1>
+  YOU ARE THE <span class="red">EXIT LIQUIDITY</span>
+</h1>
 
-  <div class="buttons">
-    <a href="#" class="btn buy-btn">BUY $ELP</a>
-    <a href="https://x.com/elpcoin?s=21" target="_blank" class="btn twitter-btn">TWITTER</a>
-  </div>
+<div class="buttons">
+  <a href="#" class="btn buy">BUY $ELP</a>
+  <a href="https://x.com/elpcoin?s=21" target="_blank" class="btn twitter">TWITTER</a>
 </div>
 
 <!-- ABOUT -->
-<div class="card">
+<div class="box">
   <h2>ABOUT $ELP</h2>
   <p>
     This is not a project. This is a lesson.<br><br>
@@ -156,7 +171,7 @@ body {
 </div>
 
 <!-- TOKENOMICS -->
-<div class="card">
+<div class="box">
   <h2>TOKENOMICS</h2>
   <p>
     Name: Exit Liquidity President<br>
@@ -169,21 +184,21 @@ body {
 </div>
 
 <!-- MEMES -->
-<div class="image-box"><img src="liquidity.png"></div>
-<div class="image-box"><img src="final.png"></div>
-<div class="image-box"><img src="community.png"></div>
-<div class="image-box"><img src="pepe.png"></div>
+<div class="grid">
+  <div class="img-box"><img src="liquidity.png"></div>
+  <div class="img-box"><img src="final.png"></div>
+  <div class="img-box"><img src="community.png"></div>
+  <div class="img-box"><img src="pepe.png"></div>
+</div>
 
 <!-- BUY -->
-<div class="image-box">
+<div class="buy-box">
   <img src="buy.png">
 </div>
 
 <!-- FOOTER -->
 <div class="footer">
   © 2024 <span>$ELP</span> — Exit Liquidity President
-</div>
-
 </div>
 
 </body>
