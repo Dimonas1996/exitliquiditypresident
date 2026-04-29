@@ -91,6 +91,15 @@ strong {
     inset 0 0 60px rgba(255,0,0,0.3),
     inset 0 0 120px rgba(255,0,0,0.2);
 }
+  @keyframes glowText {
+  0% { text-shadow: 0 0 10px red; }
+  50% { text-shadow: 0 0 30px red; }
+  100% { text-shadow: 0 0 10px red; }
+}
+
+.blink {
+  animation: glowText 1.5s infinite;
+}
 </style>
 </head>
 
@@ -145,7 +154,7 @@ strong {
   People are already buying.
 </p>
 <h1>
-  YOU ARE THE <span class="red">EXIT LIQUIDITY</span>
+<span class="red blink">EXIT LIQUIDITY</span>
 </h1>
   <p style="color:red; font-size:18px;">
   You already know how this ends.
