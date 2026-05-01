@@ -59,7 +59,28 @@ body {
   padding: 10px 20px;
   color: red;
 }
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
 
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(255,255,255,0.3);
+}
+
+.divider span {
+  margin: 0 10px;
+  color: red;
+  font-size: 14px;
+  text-shadow: 0 0 8px red;
+}
+  
 /* HERO */
 .hero {
   height: 100vh;
@@ -143,6 +164,9 @@ body {
 
 <div class="hero">
   <h1>YOU ARE THE <span>EXIT LIQUIDITY</span></h1>
+  <div class="divider">
+  <span>★</span>
+</div>
   <a class="cta" href="#">BUY $ELP</a>
 </div>
 
