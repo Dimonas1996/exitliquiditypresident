@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>$ELP</title>
 
+<!-- FAVICON -->
+<link rel="icon" type="image/png" href="logo.png">
+
 <!-- FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
 
@@ -59,7 +62,18 @@ body {
   font-size: 14px;
 }
 
-/* 🔥 TOP BUY */
+/* X ICON NAV */
+.nav-icon {
+  width: 18px;
+  filter: drop-shadow(0 0 6px red);
+  transition: 0.3s;
+}
+
+.nav-icon:hover {
+  transform: scale(1.2);
+}
+
+/* BUY BUTTON */
 .buy-btn {
   border: 1px solid red;
   padding: 10px 20px;
@@ -117,7 +131,7 @@ body {
   color: red;
 }
 
-/* ⭐ DIVIDER */
+/* DIVIDER */
 .divider {
   display: flex;
   align-items: center;
@@ -140,7 +154,7 @@ body {
   text-shadow: 0 0 10px red;
 }
 
-/* 🔥 MAIN BUTTON */
+/* MAIN BUTTON */
 .cta {
   margin-top: 8px;
   padding: 15px 40px;
@@ -168,7 +182,7 @@ body {
     0 0 80px red;
 }
 
-/* 🔥 PULSE */
+/* PULSE */
 @keyframes pulse {
   0% { box-shadow: 0 0 10px red; }
   50% { box-shadow: 0 0 30px red; }
@@ -228,7 +242,9 @@ body {
   </div>
 
   <div class="nav-right">
-    <a href="https://x.com/exitelpx?s=21">X</a>
+    <a href="https://x.com/exitelpx?s=21">
+      <img src="x.png" class="nav-icon">
+    </a>
     <a href="#">Chart</a>
     <a class="buy-btn" href="#">BUY</a>
   </div>
