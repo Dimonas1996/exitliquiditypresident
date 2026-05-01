@@ -33,13 +33,17 @@ body {
 
 .nav-left img {
   width: 45px;
-  height: 42px;
+  height: 45px;
   border-radius: 50%;
-
   border: 1px solid rgba(255,0,0,0.5);
   box-shadow: 0 0 10px rgba(255,0,0,0.6);
-
   object-fit: cover;
+}
+
+.nav-left strong {
+  color: red;
+  font-size: 18px;
+  text-shadow: 0 0 10px red;
 }
 
 .nav-right {
@@ -59,11 +63,34 @@ body {
   padding: 10px 20px;
   color: red;
 }
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url('hero-bg.png') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 40px;
+  letter-spacing: 2px;
+}
+
+.hero span {
+  color: red;
+}
+
+/* ⭐ DIVIDER */
 .divider {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 20px 0;
+  width: 60%;
 }
 
 .divider::before,
@@ -80,32 +107,16 @@ body {
   font-size: 14px;
   text-shadow: 0 0 8px red;
 }
-  
-/* HERO */
-.hero {
-  height: 100vh;
-  background: url('hero-bg.png') center/cover no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
 
-.hero h1 {
-  font-size: 40px;
-}
-
-.hero span {
-  color: red;
-}
-
+/* CTA */
 .cta {
   margin-top: 20px;
-  padding: 12px 30px;
+  padding: 15px 40px;
   border: 1px solid red;
   color: red;
   text-decoration: none;
+  font-size: 18px;
+  box-shadow: 0 0 10px rgba(255,0,0,0.5);
 }
 
 /* BOXES */
@@ -117,13 +128,26 @@ body {
 }
 
 .box {
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.1);
   padding: 20px;
   width: 260px;
 
   display: flex;
   align-items: center;
   gap: 15px;
+
+  position: relative;
+}
+
+.box::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: red;
+  box-shadow: 0 0 8px red;
 }
 
 .icon {
@@ -136,6 +160,7 @@ body {
   font-size: 12px;
 }
 
+/* FOOTER */
 .footer {
   text-align: center;
   padding: 20px;
@@ -147,13 +172,12 @@ body {
 
 <body>
 
+<!-- NAV -->
 <div class="nav">
   <div class="nav-left">
-  <img src="logo.png">
-  <strong style="color:red; font-size:18px; text-shadow:0 0 10px red;">
-    $ELP
-  </strong>
-</div>
+    <img src="logo.png">
+    <strong>$ELP</strong>
+  </div>
 
   <div class="nav-right">
     <a href="https://x.com/exitelpx?s=21">X</a>
@@ -162,14 +186,18 @@ body {
   </div>
 </div>
 
+<!-- HERO -->
 <div class="hero">
   <h1>YOU ARE THE <span>EXIT LIQUIDITY</span></h1>
+
   <div class="divider">
-  <span>★</span>
-</div>
+    <span>★</span>
+  </div>
+
   <a class="cta" href="#">BUY $ELP</a>
 </div>
 
+<!-- BOXES -->
 <div class="boxes">
 
   <div class="box">
@@ -198,6 +226,7 @@ body {
 
 </div>
 
+<!-- FOOTER -->
 <div class="footer">
   $ELP • YOU ARE THE <span style="color:red;">EXIT LIQUIDITY</span>
 </div>
