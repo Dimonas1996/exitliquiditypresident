@@ -13,7 +13,7 @@ body {
   color: white;
 }
 
-/* NAVBAR */
+/* NAV */
 .nav {
   position: fixed;
   top: 0;
@@ -22,7 +22,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.7);
 }
 
 .nav-left {
@@ -52,12 +52,6 @@ body {
   border: 1px solid red;
   padding: 10px 20px;
   color: red;
-  transition: 0.3s;
-}
-
-.buy-btn:hover {
-  background: red;
-  color: black;
 }
 
 /* HERO */
@@ -69,12 +63,10 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top: 80px;
 }
 
 .hero h1 {
   font-size: 40px;
-  letter-spacing: 2px;
 }
 
 .hero span {
@@ -82,18 +74,11 @@ body {
 }
 
 .cta {
-  margin-top: 30px;
-  padding: 15px 40px;
+  margin-top: 20px;
+  padding: 12px 30px;
   border: 1px solid red;
   color: red;
   text-decoration: none;
-  font-size: 18px;
-  transition: 0.3s;
-}
-
-.cta:hover {
-  background: red;
-  color: black;
 }
 
 /* BOXES */
@@ -107,14 +92,21 @@ body {
 .box {
   border: 1px solid rgba(255,255,255,0.2);
   padding: 20px;
-  width: 250px;
-  text-align: center;
+  width: 260px;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon {
+  width: 35px;
+  filter: drop-shadow(0 0 6px red);
 }
 
 .box-title {
   color: red;
   font-size: 12px;
-  margin-bottom: 10px;
 }
 
 .footer {
@@ -128,7 +120,6 @@ body {
 
 <body>
 
-<!-- NAV -->
 <div class="nav">
   <div class="nav-left">
     <img src="logo.png">
@@ -136,54 +127,47 @@ body {
   </div>
 
   <div class="nav-right">
-    <a href="https://x.com/exitelpx?s=21">X / TWITTER</a>
-    <a href="#">CHART</a>
-    <a class="buy-btn" href="#">BUY $ELP</a>
+    <a href="https://x.com/exitelpx?s=21">X</a>
+    <a href="#">Chart</a>
+    <a class="buy-btn" href="#">BUY</a>
   </div>
 </div>
 
-<!-- HERO -->
 <div class="hero">
-  <h1>
-    YOU ARE THE <span>EXIT LIQUIDITY</span>
-  </h1>
-
+  <h1>YOU ARE THE <span>EXIT LIQUIDITY</span></h1>
   <a class="cta" href="#">BUY $ELP</a>
 </div>
 
-<!-- INFO BOXES -->
 <div class="boxes">
- <div class="box">
-  <img src="contract.png" class="icon">
-
-  <div>
-    <div class="box-title">CONTRACT ADDRESS</div>
-    <div>0x000000000000000000000</div>
-  </div>
-</div>
-
-<div class="box">
-  <img src="x.png" class="icon">
-
-  <div>
-    <div class="box-title">TWITTER</div>
-    <div>@ExitELPx</div>
-  </div>
-</div>
 
   <div class="box">
-  <img src="pump.png" class="icon">
-
-  <div>
-    <div class="box-title">PUMPFUN</div>
-    <div>pump.fun/$ELP</div>
+    <img src="contract.png" class="icon">
+    <div>
+      <div class="box-title">CONTRACT</div>
+      <div>0x000000000000000000000</div>
+    </div>
   </div>
-</div>
+
+  <div class="box">
+    <img src="x.png" class="icon">
+    <div>
+      <div class="box-title">TWITTER</div>
+      <div>@ExitELPx</div>
+    </div>
+  </div>
+
+  <div class="box">
+    <img src="pump.png" class="icon">
+    <div>
+      <div class="box-title">PUMPFUN</div>
+      <div>pump.fun/$ELP</div>
+    </div>
+  </div>
+
 </div>
 
-<!-- FOOTER -->
 <div class="footer">
-  $ELP • YOU ARE THE <span style="color:red;">EXIT LIQUIDITY</span> • NOT FINANCIAL ADVICE
+  $ELP • YOU ARE THE <span style="color:red;">EXIT LIQUIDITY</span>
 </div>
 
 </body>
