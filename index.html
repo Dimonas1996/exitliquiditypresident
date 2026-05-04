@@ -13,47 +13,42 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.container {
+  max-width:1100px;
+  margin:auto;
+}
+
 /* HEADER */
 .header {
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:15px;
+  padding:20px;
 }
 
 .header img {
   height:40px;
 }
 
-.nav {
-  display:flex;
-  gap:15px;
-}
-
 .nav a {
-  color:#fff;
+  margin-left:20px;
   text-decoration:none;
-  font-size:14px;
-}
-
-.nav .btn {
-  border:1px solid red;
-  padding:5px 10px;
+  color:#fff;
 }
 
 /* HERO */
 .hero {
-  min-height:80vh;
-  background:url('hero-bg.png') center/cover no-repeat;
+  min-height:90vh;
   display:flex;
   align-items:center;
   justify-content:center;
   text-align:center;
-  padding:20px;
+  padding:40px 20px;
+  background:url('hero-bg.png') center/cover no-repeat;
 }
 
 .hero h1 {
-  font-size:28px;
+  font-size:50px;
   line-height:1.3;
 }
 
@@ -62,12 +57,13 @@ body {
 }
 
 .hero p {
-  font-size:14px;
+  margin-top:15px;
+  opacity:0.8;
 }
 
 .hero button {
-  margin-top:15px;
-  padding:10px 25px;
+  margin-top:25px;
+  padding:12px 30px;
   border:1px solid red;
   background:none;
   color:#fff;
@@ -77,57 +73,9 @@ body {
 /* STORY */
 .section {
   display:flex;
-  flex-direction:column;
-  padding:30px 20px;
-}
-
-.section img {
-  width:100%;
-  margin-bottom:20px;
-}
-
-.text {
-  line-height:1.6;
-  font-size:14px;
-}
-
-/* SUPPORT */
-.support {
-  display:flex;
-  flex-direction:column;
-  padding:30px 20px;
-  text-align:center;
-}
-
-.support img {
-  width:80%;
-  margin:20px auto;
-}
-
-.wallet {
-  border:1px solid #333;
-  padding:10px;
-  margin:20px 0;
-  word-break:break-all;
-}
-
-.support button {
-  padding:12px 25px;
-  background:red;
-  border:none;
-  color:#fff;
-  cursor:pointer;
-}
-
-/* DESKTOP */
-@media(min-width:768px) {
-
-.hero h1 {
-  font-size:60px;
-}
-
-.section {
-  flex-direction:row;
+  gap:50px;
+  padding:80px 20px;
+  align-items:center;
 }
 
 .section img {
@@ -136,11 +84,15 @@ body {
 
 .text {
   width:60%;
-  padding-left:40px;
+  line-height:1.7;
 }
 
+/* SUPPORT */
 .support {
-  flex-direction:row;
+  display:flex;
+  gap:50px;
+  padding:80px 20px;
+  align-items:center;
 }
 
 .support-text {
@@ -151,6 +103,37 @@ body {
   width:40%;
 }
 
+.wallet {
+  margin:20px 0;
+  padding:10px;
+  border:1px solid #333;
+  word-break:break-all;
+}
+
+button {
+  cursor:pointer;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+.section, .support {
+  flex-direction:column;
+  text-align:center;
+}
+
+.section img, .support img {
+  width:80%;
+}
+
+.text, .support-text {
+  width:100%;
+}
+
+.hero h1 {
+  font-size:28px;
+}
+
 }
 </style>
 
@@ -159,12 +142,11 @@ body {
 <body>
 
 <!-- HEADER -->
-<div class="header">
+<div class="header container">
   <img src="logo-header.png">
   <div class="nav">
     <a href="#">STORY</a>
     <a href="#">SUPPORT</a>
-    <a href="#" class="btn">ENTER</a>
   </div>
 </div>
 
@@ -177,12 +159,11 @@ body {
     </h1>
     <p>The story of every trader who was too late.</p>
     <p class="red">$SAD</p>
-    <button>ENTER</button>
   </div>
 </div>
 
 <!-- STORY -->
-<div class="section">
+<div class="section container">
   <img src="story-image.png">
   <div class="text">
     <h2>THE STORY</h2>
@@ -203,14 +184,13 @@ body {
 </div>
 
 <!-- SUPPORT -->
-<div class="support">
+<div class="support container">
   <div class="support-text">
 
     <h2>SUPPORT THE SAD TRADER</h2>
 
     <p>$SAD is being built from zero.<br>No funding. No team.</p>
 
-    <!-- WALLET -->
     <div class="wallet" id="walletAddress">
       BTtrAGY2sPV5BQDohLPq4ERBVP8TMjJ7T5iwwSWwaZ7H
     </div>
@@ -219,9 +199,8 @@ body {
 
     <br><br>
 
-    <!-- TWITTER -->
     <a href="https://x.com/the_sadtrader?s=21" target="_blank">
-      <button style="background:none;border:1px solid red;color:white;">
+      <button style="background:none;border:1px solid red;color:white;padding:10px 20px;">
         FOLLOW ON X
       </button>
     </a>
@@ -233,9 +212,14 @@ body {
 
 <script>
 function copyWallet() {
-  const text = document.getElementById("walletAddress").innerText;
-  navigator.clipboard.writeText(text);
-  alert("Wallet copied!");
+  const wallet = document.getElementById("walletAddress").innerText;
+  navigator.clipboard.writeText(wallet)
+    .then(() => {
+      alert("Wallet copied!");
+    })
+    .catch(() => {
+      alert("Copy failed");
+    });
 }
 </script>
 
