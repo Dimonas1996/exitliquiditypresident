@@ -1,290 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>$SAD — The Sad Trader</title>
-
-<!-- FONTS -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>$SAD</title>
 
 <style>
-
 body {
   margin:0;
-  background:#000;
-  color:#fff;
-  font-family: 'Inter', sans-serif;
-}
-
-.container {
-  max-width:1100px;
-  margin:auto;
-  padding:0 20px;
+  background:black;
+  color:white;
+  font-family:Arial, sans-serif;
 }
 
 /* HEADER */
 .header {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:20px;
+  position:absolute;
+  top:20px;
+  left:20px;
 }
 
 .header img {
-  height:40px;
-}
-
-.nav a {
-  margin-left:20px;
-  text-decoration:none;
-  color:#fff;
-  opacity:0.7;
-  transition:0.3s;
-}
-
-.nav a:hover {
-  opacity:1;
+  height:50px;
 }
 
 /* HERO */
 .hero {
-  position:relative;
   height:100vh;
   background:url('hero-bg.png') center/cover no-repeat;
   display:flex;
   align-items:center;
-  justify-content:center;
+  padding-left:10%;
 }
 
-.overlay {
-  position:absolute;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.75);
-}
-
-.hero-content {
-  position:relative;
-  text-align:center;
-  max-width:700px;
+.hero-text {
+  max-width:500px;
 }
 
 .hero h1 {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size:64px;
+  font-size:60px;
   line-height:1.1;
-  letter-spacing:-1px;
 }
 
 .red {
   color:#ff2b2b;
 }
 
-.hero p {
-  margin-top:15px;
-  color:#aaa;
-}
-
 .hero button {
-  margin-top:30px;
-  padding:14px 40px;
-  border:1px solid red;
-  background:none;
+  margin-top:20px;
+  padding:15px 35px;
+  border:1px solid #ff2b2b;
+  background:transparent;
   color:white;
   cursor:pointer;
-  font-weight:600;
-  letter-spacing:1px;
-  transition:0.3s;
+  font-size:16px;
 }
 
-.hero button:hover {
-  background:red;
-}
-
-/* SECTION */
-.section {
+/* STORY */
+.story {
   display:flex;
-  gap:60px;
-  padding:100px 0;
   align-items:center;
+  justify-content:center;
+  padding:80px 10%;
+  gap:50px;
 }
 
-.section img {
-  width:40%;
+.story img {
+  width:350px;
 }
 
-.text {
-  width:60%;
+.story-text {
+  max-width:400px;
+  font-size:16px;
+  line-height:1.6;
 }
 
-.text h2 {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size:28px;
-  margin-bottom:20px;
-}
-
-.text p {
-  line-height:1.8;
-  color:#aaa;
-}
-
-/* SUPPORT */
-.support {
-  display:flex;
-  gap:60px;
-  padding:100px 0;
-  align-items:center;
-}
-
-.support-text {
-  width:60%;
-}
-
-.support img {
-  width:40%;
-}
-
-.wallet {
-  margin:25px 0;
+/* WALLET */
+.wallet-box {
+  margin-top:20px;
   padding:15px;
-  border:1px solid #222;
-  background:#111;
-  border-radius:6px;
-  word-break:break-all;
+  border:1px solid #333;
   font-size:14px;
-}
-
-button {
-  cursor:pointer;
-}
-
-.copy-btn {
-  padding:12px 30px;
-  background:red;
-  border:none;
-  color:#fff;
-  font-weight:600;
-}
-
-.follow-btn {
-  margin-top:15px;
-  padding:10px 25px;
-  border:1px solid red;
-  background:none;
-  color:white;
+  word-break:break-all;
 }
 
 /* MOBILE */
 @media(max-width:768px){
 
-.hero h1 {
-  font-size:34px;
+.hero {
+  padding:20px;
 }
 
-.section, .support {
+.hero h1 {
+  font-size:30px;
+}
+
+.story {
   flex-direction:column;
   text-align:center;
 }
 
-.section img, .support img {
-  width:80%;
-}
-
-.text, .support-text {
-  width:100%;
+.story img {
+  width:200px;
 }
 
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<div class="header container">
+<!-- LOGO -->
+<div class="header">
   <img src="logo-header.png">
-  <div class="nav">
-    <a href="#">STORY</a>
-    <a href="#">SUPPORT</a>
-  </div>
 </div>
 
 <!-- HERO -->
 <div class="hero">
-  <div class="overlay"></div>
+  <div class="hero-text">
 
-  <div class="hero-content">
     <h1>
       YOU SAW IT EARLY.<br>
       <span class="red">YOU MISSED IT.</span>
     </h1>
 
-    <p>Everyone has been too late.</p>
+    <h2 class="red">$SAD</h2>
 
-    <button onclick="scrollToStory()">READ THE STORY</button>
+    <button onclick="copyWallet()">❤️ DONATION</button>
+
   </div>
 </div>
 
 <!-- STORY -->
-<div class="section container">
+<div class="story">
+
   <img src="story-image.png">
-  <div class="text">
-    <h2>THE STORY</h2>
+
+  <div class="story-text">
+
     <p>
-    It started simple.<br>
-    He saw people making money on memecoins.<br>
-    Charts going up in minutes.<br><br>
-
-    He knew about it early.<br>
-    But he didn’t act.<br><br>
-
-    He waited for a better entry.<br>
-    It never came.<br><br>
-
-    So he watched it run without him.
+    €68,000 gone.<br><br>
+    All my savings.<br><br>
+    This is my story.
     </p>
-  </div>
-</div>
 
-<!-- SUPPORT -->
-<div class="support container">
-  <div class="support-text">
-
-    <h2>SUPPORT THE SAD TRADER</h2>
-
-    <p>$SAD is being built from zero. No funding. No team.</p>
-
-    <div class="wallet" id="walletAddress">
-      BTtrAGY2sPV5BQDohLPq4ERBVP8TMjJ7T5iwwSWwaZ7H
+    <div id="wallet" class="wallet-box">
+    BTtrAGY2sPV5BQDohLPq4ERBVP8TMjJ7T5iwwSWwaZ7H
     </div>
 
-    <button class="copy-btn" onclick="copyWallet()">COPY WALLET</button>
-
-    <br><br>
-
-    <a href="https://x.com/the_sadtrader?s=21" target="_blank">
-      <button class="follow-btn">FOLLOW ON X</button>
-    </a>
-
   </div>
 
-  <img src="logo-big.png">
 </div>
 
 <script>
-function copyWallet() {
-  const wallet = document.getElementById("walletAddress").innerText;
-  navigator.clipboard.writeText(wallet)
-    .then(() => alert("Wallet copied!"))
-    .catch(() => alert("Copy failed"));
-}
-
-function scrollToStory() {
-  document.querySelector('.section').scrollIntoView({
-    behavior: 'smooth'
-  });
+function copyWallet(){
+  const text = document.getElementById("wallet").innerText;
+  navigator.clipboard.writeText(text);
+  alert("Wallet copied");
 }
 </script>
 
