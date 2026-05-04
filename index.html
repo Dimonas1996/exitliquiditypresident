@@ -5,102 +5,103 @@
 <title>$SAD</title>
 
 <style>
-body {
+body{
   margin:0;
   background:black;
   color:white;
   font-family:Arial, sans-serif;
 }
 
-/* HEADER */
-.header {
+/* LOGO */
+.logo{
   position:absolute;
   top:20px;
   left:20px;
 }
-
-.header img {
+.logo img{
   height:50px;
 }
 
 /* HERO */
-.hero {
-  height:100vh;
+.hero{
+  min-height:100vh;
   background:url('hero-bg.png') center/cover no-repeat;
   display:flex;
   align-items:center;
-  padding-left:10%;
+  justify-content:center;
+  padding:20px;
+  text-align:center;
 }
 
-.hero-text {
+.hero-content{
   max-width:500px;
 }
 
-.hero h1 {
-  font-size:60px;
-  line-height:1.1;
+.hero h1{
+  font-size:42px;
+  line-height:1.2;
 }
 
-.red {
+.red{
   color:#ff2b2b;
 }
 
-.hero button {
+.btn{
   margin-top:20px;
-  padding:15px 35px;
+  padding:14px 30px;
   border:1px solid #ff2b2b;
-  background:transparent;
+  background:none;
   color:white;
-  cursor:pointer;
   font-size:16px;
+  cursor:pointer;
 }
 
 /* STORY */
-.story {
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:80px 10%;
-  gap:50px;
+.story{
+  padding:40px 20px;
+  text-align:center;
 }
 
-.story img {
-  width:350px;
+.story img{
+  width:220px;
+  margin-bottom:20px;
 }
 
-.story-text {
-  max-width:400px;
-  font-size:16px;
-  line-height:1.6;
-}
-
-/* WALLET */
-.wallet-box {
+.wallet{
   margin-top:20px;
-  padding:15px;
+  padding:10px;
   border:1px solid #333;
-  font-size:14px;
+  font-size:13px;
   word-break:break-all;
 }
 
 /* MOBILE */
-@media(max-width:768px){
+@media(min-width:768px){
 
-.hero {
-  padding:20px;
+.hero{
+  justify-content:flex-start;
+  text-align:left;
+  padding-left:10%;
 }
 
-.hero h1 {
-  font-size:30px;
+.hero-content{
+  max-width:450px;
 }
 
-.story {
-  flex-direction:column;
-  text-align:center;
+.hero h1{
+  font-size:60px;
 }
 
-.story img {
-  width:200px;
+.story{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:50px;
+  text-align:left;
+}
+
+.story img{
+  width:320px;
 }
 
 }
@@ -110,13 +111,13 @@ body {
 <body>
 
 <!-- LOGO -->
-<div class="header">
+<div class="logo">
   <img src="logo-header.png">
 </div>
 
 <!-- HERO -->
 <div class="hero">
-  <div class="hero-text">
+  <div class="hero-content">
 
     <h1>
       YOU SAW IT EARLY.<br>
@@ -125,7 +126,7 @@ body {
 
     <h2 class="red">$SAD</h2>
 
-    <button onclick="copyWallet()">❤️ DONATION</button>
+    <button class="btn" onclick="copyWallet()">❤️ DONATION</button>
 
   </div>
 </div>
@@ -135,26 +136,25 @@ body {
 
   <img src="story-image.png">
 
-  <div class="story-text">
-
+  <div>
     <p>
-    €68,000 gone.<br><br>
-    All my savings.<br><br>
-    This is my story.
+      €68,000 gone.<br><br>
+      All my savings.<br><br>
+      This is my story.
     </p>
 
-    <div id="wallet" class="wallet-box">
-    BTtrAGY2sPV5BQDohLPq4ERBVP8TMjJ7T5iwwSWwaZ7H
+    <div id="wallet" class="wallet">
+      BTtrAGY2sPV5BQDohLPq4ERBVP8TMjJ7T5iwwSWwaZ7H
     </div>
-
   </div>
 
 </div>
 
 <script>
 function copyWallet(){
-  const text = document.getElementById("wallet").innerText;
-  navigator.clipboard.writeText(text);
+  navigator.clipboard.writeText(
+    document.getElementById("wallet").innerText
+  );
   alert("Wallet copied");
 }
 </script>
