@@ -3,128 +3,182 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CHANCE</title>
+<title>The Sad Trader</title>
 
 <style>
 body {
-  margin: 0;
+  margin:0;
   font-family: Arial, sans-serif;
-  background: #000;
-  color: #fff;
-  text-align: center;
+  background:#000;
+  color:#fff;
 }
 
-/* LOGO */
-.logo {
-  margin-top: 40px;
+/* HEADER */
+.header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 50px;
 }
 
-#dice {
-  width: 120px;
-  transition: transform 0.8s ease;
+.header img {
+  height:50px;
+}
+
+.nav a {
+  margin-left:30px;
+  text-decoration:none;
+  color:#fff;
+}
+
+.nav .btn {
+  border:1px solid red;
+  padding:8px 20px;
 }
 
 /* HERO */
+.hero {
+  height:90vh;
+  background:url('hero-bg.png') no-repeat center/cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
 .hero h1 {
-  font-size: 36px;
-  margin-top: 20px;
+  font-size:70px;
+  margin:0;
+}
+
+.red {
+  color:#ff2b2b;
 }
 
 .hero p {
-  color: #aaa;
+  margin:20px 0;
 }
 
-/* BUTTONS */
-.roll-btn, .buy-btn {
-  margin-top: 20px;
-  padding: 15px 30px;
-  font-size: 18px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
+.hero button {
+  padding:15px 40px;
+  background:none;
+  border:1px solid red;
+  color:#fff;
+  cursor:pointer;
 }
 
-.roll-btn {
-  background: #ffd600;
-  color: #000;
+/* STORY */
+.section {
+  display:flex;
+  padding:80px 50px;
 }
 
-.buy-btn {
-  background: #fff;
-  color: #000;
+.section img {
+  width:40%;
 }
 
-/* RESULT */
-.result {
-  margin-top: 20px;
-  font-size: 26px;
-  font-weight: bold;
+.text {
+  width:60%;
+  padding-left:40px;
+  line-height:1.6;
 }
 
-/* LIVE FEED */
-.live {
-  margin-top: 40px;
-  font-size: 14px;
-  color: #aaa;
+/* SUPPORT */
+.support {
+  display:flex;
+  padding:80px 50px;
+  align-items:center;
+}
+
+.support-text {
+  width:60%;
+  text-align:center;
+}
+
+.support img {
+  width:40%;
+}
+
+.wallet {
+  margin:20px 0;
+  padding:10px;
+  border:1px solid #333;
+}
+
+.support button {
+  padding:15px 40px;
+  background:#ff2b2b;
+  border:none;
+  color:#fff;
+  cursor:pointer;
 }
 </style>
+
 </head>
 
 <body>
 
-<div class="logo">
-  <img id="dice" src="logo.png">
+<!-- HEADER -->
+<div class="header">
+  <img src="logo-header.png">
+  <div class="nav">
+    <a href="#">STORY</a>
+    <a href="#">SUPPORT</a>
+    <a href="#" class="btn">ENTER</a>
+  </div>
 </div>
 
+<!-- HERO -->
 <div class="hero">
-  <h1>EVERY BUY IS A ROLL</h1>
-  <p>You either win... or you don’t.</p>
+  <div>
+    <h1>
+      YOU SAW IT EARLY.<br>
+      <span class="red">YOU DIDN’T ACT.</span>
+    </h1>
+    <p>The story of every trader who was too late.</p>
+    <p class="red">$SAD</p>
+    <button>ENTER</button>
+  </div>
 </div>
 
-<button class="roll-btn" onclick="roll()">ROLL 🎲</button>
+<!-- STORY -->
+<div class="section">
+  <img src="story-image.png">
+  <div class="text">
+    <h2>THE STORY</h2>
+    <p>
+    It started simple.<br>
+    He saw people making money on memecoins.<br>
+    Charts going up in minutes. Everyone was winning.<br><br>
 
-<div class="result" id="result"></div>
+    He knew about it early.<br>
+    But he didn’t act.<br><br>
 
-<br>
+    He waited.<br>
+    For a better entry. For a dip.<br>
+    It never came.<br><br>
 
-<a href="https://pump.fun" target="_blank">
-  <button class="buy-btn">BUY NOW</button>
-</a>
-
-<div class="live" id="live">
+    So he watched it run without him.<br>
+    </p>
+  </div>
 </div>
 
-<script>
-function roll() {
-  const dice = document.getElementById("dice");
-  const resultDiv = document.getElementById("result");
+<!-- SUPPORT -->
+<div class="support">
+  <div class="support-text">
+    <h2>SUPPORT THE SAD TRADER</h2>
+    <p>$SAD is being built from zero.<br>No funding. No team. Just one idea.</p>
+    <p>If you believe in this story and want to support it, you can.</p>
 
-  // random rotation
-  const randomRotate = Math.floor(Math.random() * 1000) + 720;
-  dice.style.transform = "rotate(" + randomRotate + "deg)";
+    <div class="wallet">
+      YOUR WALLET HERE
+    </div>
 
-  resultDiv.innerText = "ROLLING...";
+    <button>SEND SOL</button>
+  </div>
 
-  setTimeout(() => {
-    const outcomes = ["🟢 WON", "🔴 LOST", "🟡 AGAIN"];
-    const result = outcomes[Math.floor(Math.random() * outcomes.length)];
-
-    resultDiv.innerText = result;
-
-    addLive(result);
-
-  }, 1000);
-}
-
-// fake live feed
-function addLive(result) {
-  const live = document.getElementById("live");
-  const wallet = "0x" + Math.random().toString(16).substr(2,6);
-  const line = wallet + " → " + result;
-
-  live.innerHTML = line + "<br>" + live.innerHTML;
-}
-</script>
+  <img src="logo-big.png">
+</div>
 
 </body>
 </html>
