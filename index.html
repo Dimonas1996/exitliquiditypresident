@@ -8,9 +8,9 @@
 <style>
 body {
   margin:0;
-  font-family: Arial, sans-serif;
   background:#000;
   color:#fff;
+  font-family: Arial, sans-serif;
 }
 
 /* HEADER */
@@ -18,7 +18,7 @@ body {
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:20px 50px;
+  padding:20px 40px;
 }
 
 .header img {
@@ -26,9 +26,9 @@ body {
 }
 
 .nav a {
-  margin-left:30px;
-  text-decoration:none;
   color:#fff;
+  margin-left:25px;
+  text-decoration:none;
 }
 
 .nav .btn {
@@ -39,15 +39,15 @@ body {
 /* HERO */
 .hero {
   height:90vh;
-  background:url('hero-bg.png') no-repeat center/cover;
+  background: url('hero-bg.png') center/cover no-repeat;
   display:flex;
-  align-items:center;
   justify-content:center;
+  align-items:center;
   text-align:center;
 }
 
 .hero h1 {
-  font-size:70px;
+  font-size:60px;
   margin:0;
 }
 
@@ -55,22 +55,18 @@ body {
   color:#ff2b2b;
 }
 
-.hero p {
-  margin:20px 0;
-}
-
 .hero button {
-  padding:15px 40px;
+  margin-top:20px;
+  padding:12px 30px;
   background:none;
   border:1px solid red;
   color:#fff;
-  cursor:pointer;
 }
 
 /* STORY */
 .section {
   display:flex;
-  padding:80px 50px;
+  padding:60px 40px;
 }
 
 .section img {
@@ -86,7 +82,7 @@ body {
 /* SUPPORT */
 .support {
   display:flex;
-  padding:80px 50px;
+  padding:60px 40px;
   align-items:center;
 }
 
@@ -100,16 +96,12 @@ body {
 }
 
 .wallet {
-  margin:20px 0;
-  padding:10px;
   border:1px solid #333;
+  padding:10px;
+  margin:20px 0;
 }
 
-.support button {
-  padding:15px 40px;
-  background:#ff2b2b;
-  border:none;
-  color:#fff;
+button {
   cursor:pointer;
 }
 </style>
@@ -149,16 +141,15 @@ body {
     <p>
     It started simple.<br>
     He saw people making money on memecoins.<br>
-    Charts going up in minutes. Everyone was winning.<br><br>
+    Charts going up in minutes.<br><br>
 
     He knew about it early.<br>
     But he didn’t act.<br><br>
 
-    He waited.<br>
-    For a better entry. For a dip.<br>
+    He waited for a better entry.<br>
     It never came.<br><br>
 
-    So he watched it run without him.<br>
+    So he watched it run without him.
     </p>
   </div>
 </div>
@@ -167,14 +158,15 @@ body {
 <div class="support">
   <div class="support-text">
     <h2>SUPPORT THE SAD TRADER</h2>
-    <p>$SAD is being built from zero.<br>No funding. No team. Just one idea.</p>
-    <p>If you believe in this story and want to support it, you can.</p>
+    <p>$SAD is being built from zero.<br>No funding. No team.</p>
 
     <div class="wallet">
       YOUR WALLET HERE
     </div>
 
-    <button>SEND SOL</button>
+    <button style="background:red;color:white;border:none;padding:12px 30px;">
+      SEND SOL
+    </button>
   </div>
 
   <img src="logo-big.png">
