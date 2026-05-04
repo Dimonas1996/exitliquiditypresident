@@ -5,12 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>$SAD — The Sad Trader</title>
 
+<!-- FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
 <style>
+
 body {
   margin:0;
   background:#000;
   color:#fff;
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .container {
@@ -35,6 +39,12 @@ body {
   margin-left:20px;
   text-decoration:none;
   color:#fff;
+  opacity:0.7;
+  transition:0.3s;
+}
+
+.nav a:hover {
+  opacity:1;
 }
 
 /* HERO */
@@ -51,18 +61,20 @@ body {
   position:absolute;
   width:100%;
   height:100%;
-  background:rgba(0,0,0,0.7);
+  background:rgba(0,0,0,0.75);
 }
 
 .hero-content {
   position:relative;
   text-align:center;
-  max-width:600px;
+  max-width:700px;
 }
 
 .hero h1 {
-  font-size:60px;
-  line-height:1.2;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size:64px;
+  line-height:1.1;
+  letter-spacing:-1px;
 }
 
 .red {
@@ -71,7 +83,7 @@ body {
 
 .hero p {
   margin-top:15px;
-  opacity:0.7;
+  color:#aaa;
 }
 
 .hero button {
@@ -81,6 +93,8 @@ body {
   background:none;
   color:white;
   cursor:pointer;
+  font-weight:600;
+  letter-spacing:1px;
   transition:0.3s;
 }
 
@@ -88,11 +102,11 @@ body {
   background:red;
 }
 
-/* STORY */
+/* SECTION */
 .section {
   display:flex;
-  gap:50px;
-  padding:80px 0;
+  gap:60px;
+  padding:100px 0;
   align-items:center;
 }
 
@@ -102,14 +116,24 @@ body {
 
 .text {
   width:60%;
-  line-height:1.7;
+}
+
+.text h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size:28px;
+  margin-bottom:20px;
+}
+
+.text p {
+  line-height:1.8;
+  color:#aaa;
 }
 
 /* SUPPORT */
 .support {
   display:flex;
-  gap:50px;
-  padding:80px 0;
+  gap:60px;
+  padding:100px 0;
   align-items:center;
 }
 
@@ -122,17 +146,40 @@ body {
 }
 
 .wallet {
-  margin:20px 0;
-  padding:12px;
-  border:1px solid #333;
+  margin:25px 0;
+  padding:15px;
+  border:1px solid #222;
+  background:#111;
+  border-radius:6px;
   word-break:break-all;
+  font-size:14px;
+}
+
+button {
+  cursor:pointer;
+}
+
+.copy-btn {
+  padding:12px 30px;
+  background:red;
+  border:none;
+  color:#fff;
+  font-weight:600;
+}
+
+.follow-btn {
+  margin-top:15px;
+  padding:10px 25px;
+  border:1px solid red;
+  background:none;
+  color:white;
 }
 
 /* MOBILE */
 @media(max-width:768px){
 
 .hero h1 {
-  font-size:32px;
+  font-size:34px;
 }
 
 .section, .support {
@@ -149,6 +196,7 @@ body {
 }
 
 }
+
 </style>
 </head>
 
@@ -206,20 +254,18 @@ body {
 
     <h2>SUPPORT THE SAD TRADER</h2>
 
-    <p>$SAD is being built from zero.<br>No funding. No team.</p>
+    <p>$SAD is being built from zero. No funding. No team.</p>
 
     <div class="wallet" id="walletAddress">
       BTtrAGY2sPV5BQDohLPq4ERBVP8TMjJ7T5iwwSWwaZ7H
     </div>
 
-    <button onclick="copyWallet()">COPY WALLET</button>
+    <button class="copy-btn" onclick="copyWallet()">COPY WALLET</button>
 
     <br><br>
 
     <a href="https://x.com/the_sadtrader?s=21" target="_blank">
-      <button style="background:none;border:1px solid red;color:white;padding:10px 20px;">
-        FOLLOW ON X
-      </button>
+      <button class="follow-btn">FOLLOW ON X</button>
     </a>
 
   </div>
