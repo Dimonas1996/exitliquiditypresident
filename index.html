@@ -71,6 +71,7 @@ body {
   border:1px solid red;
   background:none;
   color:#fff;
+  cursor:pointer;
 }
 
 /* STORY */
@@ -115,6 +116,7 @@ body {
   background:red;
   border:none;
   color:#fff;
+  cursor:pointer;
 }
 
 /* DESKTOP */
@@ -203,18 +205,39 @@ body {
 <!-- SUPPORT -->
 <div class="support">
   <div class="support-text">
+
     <h2>SUPPORT THE SAD TRADER</h2>
+
     <p>$SAD is being built from zero.<br>No funding. No team.</p>
 
-    <div class="wallet">
-      YOUR WALLET HERE
+    <!-- WALLET -->
+    <div class="wallet" id="walletAddress">
+      BTtrAGY2sPV5BQDohLPq4ERBVP8TMjJ7T5iwwSWwaZ7H
     </div>
 
-    <button>SEND SOL</button>
+    <button onclick="copyWallet()">COPY WALLET</button>
+
+    <br><br>
+
+    <!-- TWITTER -->
+    <a href="https://x.com/the_sadtrader?s=21" target="_blank">
+      <button style="background:none;border:1px solid red;color:white;">
+        FOLLOW ON X
+      </button>
+    </a>
+
   </div>
 
   <img src="logo-big.png">
 </div>
+
+<script>
+function copyWallet() {
+  const text = document.getElementById("walletAddress").innerText;
+  navigator.clipboard.writeText(text);
+  alert("Wallet copied!");
+}
+</script>
 
 </body>
 </html>
