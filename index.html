@@ -12,34 +12,33 @@ body{
   font-family:Arial, sans-serif;
 }
 
-/* LOGO */
-.logo{
-  position:absolute;
-  top:20px;
-  left:20px;
-}
-.logo img{
-  height:50px;
-}
-
 /* HERO */
 .hero{
-  min-height:100vh;
+  position:relative;
+  height:100vh;
   background:url('hero-bg.png') center/cover no-repeat;
   display:flex;
   align-items:center;
-  justify-content:center;
-  padding:20px;
-  text-align:center;
+  padding-left:8%;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.6);
 }
 
 .hero-content{
+  position:relative;
+  z-index:2;
   max-width:500px;
 }
 
 .hero h1{
-  font-size:42px;
-  line-height:1.2;
+  font-size:70px;
+  line-height:1.05;
 }
 
 .red{
@@ -47,8 +46,8 @@ body{
 }
 
 .btn{
-  margin-top:20px;
-  padding:14px 30px;
+  margin-top:25px;
+  padding:15px 40px;
   border:1px solid #ff2b2b;
   background:none;
   color:white;
@@ -58,50 +57,60 @@ body{
 
 /* STORY */
 .story{
-  padding:40px 20px;
+  background:#0a0a0a;
+  padding:80px 20px;
   text-align:center;
 }
 
-.story img{
-  width:220px;
-  margin-bottom:20px;
+.story h2{
+  color:#ff2b2b;
+  margin-bottom:30px;
+}
+
+.story p{
+  max-width:500px;
+  margin:auto;
+  line-height:1.7;
+  color:#ccc;
+}
+
+.highlight{
+  color:#ff2b2b;
+}
+
+/* SUPPORT */
+.support{
+  padding:60px 20px;
+  text-align:center;
 }
 
 .wallet{
-  margin-top:20px;
-  padding:10px;
+  margin:20px auto;
+  padding:15px;
   border:1px solid #333;
-  font-size:13px;
+  max-width:600px;
   word-break:break-all;
 }
 
-/* MOBILE */
-@media(min-width:768px){
-
-.hero{
-  justify-content:flex-start;
-  text-align:left;
-  padding-left:10%;
+.copy-btn{
+  padding:10px 25px;
+  border:1px solid #ff2b2b;
+  background:none;
+  color:white;
+  cursor:pointer;
 }
 
-.hero-content{
-  max-width:450px;
+/* MOBILE */
+@media(max-width:768px){
+
+.hero{
+  justify-content:center;
+  text-align:center;
+  padding:20px;
 }
 
 .hero h1{
-  font-size:60px;
-}
-
-.story{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:50px;
-  text-align:left;
-}
-
-.story img{
-  width:320px;
+  font-size:35px;
 }
 
 }
@@ -110,23 +119,17 @@ body{
 
 <body>
 
-<!-- LOGO -->
-<div class="logo">
-  <img src="logo-header.png">
-</div>
-
 <!-- HERO -->
 <div class="hero">
   <div class="hero-content">
 
     <h1>
       YOU SAW IT EARLY.<br>
-      <span class="red">YOU MISSED IT.</span>
+      YOU MISSED IT.<br>
+      <span class="red">$SAD</span>
     </h1>
 
-    <h2 class="red">$SAD</h2>
-
-    <button class="btn" onclick="copyWallet()">❤️ DONATION</button>
+    <button class="btn" onclick="copyWallet()">❤️ DONATE</button>
 
   </div>
 </div>
@@ -134,28 +137,48 @@ body{
 <!-- STORY -->
 <div class="story">
 
-  <img src="story-image.png">
+  <h2>THIS IS MY STORY.</h2>
 
-  <div>
-    <p>
-      €68,000 gone.<br><br>
-      All my savings.<br><br>
-      This is my story.
-    </p>
+  <p>
+  I was chasing dreams.<br>
+  Financial freedom.<br>
+  A better life.<br><br>
 
-    <div id="wallet" class="wallet">
-      BTtrAGY2sPV5BQDohLPq4ERBVP8TMjJ7T5iwwSWwaZ7H
-    </div>
+  I found memecoins.<br>
+  It felt easy.<br>
+  Until it wasn’t.<br><br>
+
+  Until there was nothing left.<br><br>
+
+  <span class="highlight">€68,000 gone.</span><br>
+  <span class="highlight">All my savings.</span><br><br>
+
+  No profit.<br>
+  No second chance.<br>
+  Just a lesson.
+  </p>
+
+</div>
+
+<!-- SUPPORT -->
+<div class="support">
+
+  <h2 class="red">SUPPORT THIS STORY</h2>
+
+  <div id="wallet" class="wallet">
+  BTtrAGY2sPV5BQDohLPq4ERBVP8TMjJ7T5iwwSWwaZ7H
   </div>
+
+  <button class="copy-btn" onclick="copyWallet()">COPY</button>
 
 </div>
 
 <script>
 function copyWallet(){
-  navigator.clipboard.writeText(
-    document.getElementById("wallet").innerText
-  );
-  alert("Wallet copied");
+navigator.clipboard.writeText(
+document.getElementById("wallet").innerText
+);
+alert("Copied");
 }
 </script>
 
