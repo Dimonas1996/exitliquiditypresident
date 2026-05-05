@@ -12,90 +12,16 @@ body{
   font-family:Arial, sans-serif;
 }
 
-/* HEADER */
-.header{
-  position:absolute;
-  top:20px;
-  left:30px;
-  display:flex;
-  align-items:center;
-  gap:10px;
-  z-index:2;
-}
-
-.header img{
-  height:50px;
-}
-
-.header span{
-  font-size:22px;
-  font-weight:bold;
-}
-
-.header span b{
-  color:#ff2b2b;
-}
-
-/* HERO */
+/* HERO IMAGE */
 .hero{
   height:100vh;
-  background:url('hero-bg.png') center/cover no-repeat;
-  display:flex;
-  align-items:center;
-  padding-left:8%;
+  background:url('hero-bg.jpg') center/cover no-repeat;
 }
 
-/* TEXT */
-.hero-text{
-  max-width:500px;
-}
-
-.hero-text h1{
-  font-size:70px;
-  line-height:1.05;
-}
-
-.red{
-  color:#ff2b2b;
-}
-
-/* BUTTON */
-.btn{
-  margin-top:30px;
-  padding:15px 40px;
-  border:1px solid #ff2b2b;
-  background:none;
-  color:white;
-  font-size:16px;
-  cursor:pointer;
-}
-
-/* STORY */
-.story{
-  background:#0a0a0a;
-  padding:80px 20px;
+/* WALLET SECTION */
+.wallet-section{
   text-align:center;
-}
-
-.story h2{
-  color:#ff2b2b;
-}
-
-.story p{
-  max-width:500px;
-  margin:auto;
-  line-height:1.7;
-  color:#ccc;
-}
-
-.highlight{
-  color:#ff2b2b;
-}
-
-/* SUPPORT */
-.support{
-  padding:60px 20px;
-  text-align:center;
+  padding:30px 20px;
 }
 
 .wallet{
@@ -104,101 +30,41 @@ body{
   border:1px solid #333;
   max-width:600px;
   word-break:break-all;
+  font-size:14px;
 }
 
-.copy-btn{
-  padding:10px 25px;
+button{
+  padding:12px 25px;
   border:1px solid #ff2b2b;
   background:none;
   color:white;
   cursor:pointer;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-
-.hero{
-  padding:20px;
-  justify-content:center;
-  text-align:center;
-}
-
-.hero-text h1{
-  font-size:35px;
-}
-
-.header{
-  left:15px;
-}
-
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<div class="header">
-  <img src="logo-header.png">
-  <span>THE <b>SAD</b> TRADER</span>
-</div>
-
 <!-- HERO -->
-<div class="hero">
+<div class="hero"></div>
 
-  <div class="hero-text">
-    <h1>
-      YOU SAW IT EARLY.<br>
-      YOU MISSED IT.<br>
-      <span class="red">$SAD</span>
-    </h1>
+<!-- WALLET -->
+<div class="wallet-section">
 
-    <button class="btn" onclick="copyWallet()">❤️ DONATE</button>
-  </div>
-
+<div id="wallet" class="wallet">
+BTtrAGY2sPV5BQDohLPq4ERBVP8TMjJ7T5iwwSWwaZ7H
 </div>
 
-<!-- STORY -->
-<div class="story">
-
-  <h2>THIS IS MY STORY</h2>
-
-  <p>
-  I was chasing dreams.<br>
-  Financial freedom.<br><br>
-
-  I found memecoins.<br>
-  Until it wasn’t.<br><br>
-
-  <span class="highlight">€68,000 gone.</span><br>
-  <span class="highlight">All my savings.</span><br><br>
-
-  No profit.<br>
-  No second chance.<br>
-  Just a lesson.
-  </p>
-
-</div>
-
-<!-- SUPPORT -->
-<div class="support">
-
-  <h2 class="red">SUPPORT THIS STORY</h2>
-
-  <div id="wallet" class="wallet">
-  BTtrAGY2sPV5BQDohLPq4ERBVP8TMjJ7T5iwwSWwaZ7H
-  </div>
-
-  <button class="copy-btn" onclick="copyWallet()">COPY</button>
+<button onclick="copyWallet()">❤️ DONATION</button>
 
 </div>
 
 <script>
 function copyWallet(){
-navigator.clipboard.writeText(
-document.getElementById("wallet").innerText
-);
-alert("Copied");
+  navigator.clipboard.writeText(
+    document.getElementById("wallet").innerText
+  );
+  alert("Wallet copied");
 }
 </script>
 
