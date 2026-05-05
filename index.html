@@ -10,30 +10,49 @@ body{
   background:black;
   color:white;
   font-family:Arial, sans-serif;
-}
-
-/* HERO IMAGE */
-.hero{
-  height:100vh;
-  background:url('hero-bg.jpg') center/cover no-repeat;
-}
-
-/* WALLET SECTION */
-.wallet-section{
   text-align:center;
-  padding:30px 20px;
 }
 
+/* HERO */
+.hero img{
+  width:100%;
+  display:block;
+}
+
+/* STORY */
+.story{
+  padding:40px 20px;
+}
+
+.story h2{
+  color:#ff2b2b;
+  margin-bottom:20px;
+}
+
+.story p{
+  color:#ccc;
+  line-height:1.6;
+  max-width:400px;
+  margin:auto;
+}
+
+.red{
+  color:#ff2b2b;
+}
+
+/* WALLET */
 .wallet{
-  margin:20px auto;
+  margin-top:30px;
   padding:15px;
-  border:1px solid #333;
-  max-width:600px;
+  border:1px solid #ff2b2b;
+  display:inline-block;
   word-break:break-all;
-  font-size:14px;
+  max-width:90%;
 }
 
+/* BUTTON */
 button{
+  margin-top:15px;
   padding:12px 25px;
   border:1px solid #ff2b2b;
   background:none;
@@ -46,14 +65,37 @@ button{
 <body>
 
 <!-- HERO -->
-<div class="hero"></div>
+<div class="hero">
+  <img src="hero-bg.jpg">
+</div>
 
-<!-- WALLET -->
-<div class="wallet-section">
+<!-- STORY -->
+<div class="story">
+
+<h2>THIS IS MY STORY</h2>
+
+<p>
+I was chasing dreams.<br>
+Financial freedom.<br><br>
+
+I found memecoins.<br>
+Until it wasn’t.<br><br>
+
+<span class="red">€68,000 gone.</span><br>
+<span class="red">All my savings.</span><br><br>
+
+No profit.<br>
+No second chance.<br>
+Just a lesson.
+</p>
+
+<h2 style="margin-top:40px;">SUPPORT THIS STORY</h2>
 
 <div id="wallet" class="wallet">
 BTtrAGY2sPV5BQDohLPq4ERBVP8TMjJ7T5iwwSWwaZ7H
 </div>
+
+<br>
 
 <button onclick="copyWallet()">❤️ DONATION</button>
 
