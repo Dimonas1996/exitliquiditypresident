@@ -133,10 +133,22 @@ Every loss has a story.<br>
 
 <script>
 function copyWallet(){
-  navigator.clipboard.writeText(
-    document.getElementById("wallet").innerText
-  );
-  alert("Wallet copied");
+  const text = "BTtrAGY2sPV5BQDohLPq4ERBVP8TMjJ7T5iwwSWwaZ7H";
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(() => {
+      alert("Wallet copied");
+    });
+  } else {
+    // fallback (veikia visur)
+    const textarea = document.createElement("textarea");
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textarea);
+    alert("Wallet copied");
+  }
 }
 </script>
 
