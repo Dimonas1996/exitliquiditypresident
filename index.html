@@ -4,16 +4,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>$SAD</title>
 
+<!-- FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap" rel="stylesheet">
+
 <style>
 body{
   margin:0;
   background:black;
   color:white;
-  font-family:Arial, sans-serif;
   text-align:center;
 }
 
-/* HERO */
+/* HERO IMAGE */
 .hero img{
   width:100%;
   display:block;
@@ -21,19 +23,22 @@ body{
 
 /* STORY */
 .story{
-  padding:40px 20px;
+  padding:50px 20px;
 }
 
 .story h2{
+  font-family:'Bebas Neue', sans-serif;
   color:#ff2b2b;
-  margin-bottom:20px;
+  letter-spacing:2px;
+  font-size:32px;
 }
 
 .story p{
+  font-family:'Montserrat', sans-serif;
   color:#ccc;
-  line-height:1.6;
-  max-width:400px;
-  margin:auto;
+  line-height:1.8;
+  max-width:420px;
+  margin:20px auto;
 }
 
 .red{
@@ -41,23 +46,47 @@ body{
 }
 
 /* WALLET */
+.wallet-title{
+  margin-top:40px;
+  font-family:'Bebas Neue';
+  color:#ff2b2b;
+}
+
 .wallet{
-  margin-top:30px;
+  margin:20px auto;
   padding:15px;
   border:1px solid #ff2b2b;
-  display:inline-block;
+  max-width:600px;
   word-break:break-all;
-  max-width:90%;
+  font-family:'Montserrat';
 }
 
 /* BUTTON */
 button{
-  margin-top:15px;
-  padding:12px 25px;
+  margin-top:20px;
+  padding:14px 30px;
   border:1px solid #ff2b2b;
   background:none;
   color:white;
+  font-family:'Montserrat';
   cursor:pointer;
+}
+
+/* BOTTOM TEXT */
+.bottom-text{
+  margin-top:25px;
+  font-family:'Montserrat';
+  color:#777;
+  font-size:14px;
+}
+
+.bottom-text span{
+  color:#ff2b2b;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .story h2{font-size:26px;}
 }
 </style>
 </head>
@@ -89,15 +118,18 @@ No second chance.<br>
 Just a lesson.
 </p>
 
-<h2 style="margin-top:40px;">SUPPORT THIS STORY</h2>
+<h2 class="wallet-title">SUPPORT THIS STORY</h2>
 
 <div id="wallet" class="wallet">
 BTtrAGY2sPV5BQDohLPq4ERBVP8TMjJ7T5iwwSWwaZ7H
 </div>
 
-<br>
-
 <button onclick="copyWallet()">❤️ DONATION</button>
+
+<p class="bottom-text">
+Every loss has a story.<br>
+<span>$SAD is ours.</span>
+</p>
 
 </div>
 
