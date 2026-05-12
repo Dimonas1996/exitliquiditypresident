@@ -1,24 +1,265 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>MetaEarth AI</title>
-  <style>
-    body{
-      margin:0;
-      background:#f5f4ee;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    img{
-      width:100%;
-      max-width:1200px;
-    }
-  </style>
+<title>MetaEarth AI</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#050b05;
+    color:white;
+    font-family:Arial, sans-serif;
+    overflow-x:hidden;
+}
+
+.hero{
+    min-height:100vh;
+    background:
+    linear-gradient(to right, rgba(0,0,0,.88), rgba(0,0,0,.35)),
+    url('hero.jpg');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    padding:60px 8%;
+}
+
+.container{
+    max-width:650px;
+}
+
+.logo{
+    width:95px;
+    margin-bottom:20px;
+}
+
+.brand{
+    font-size:52px;
+    font-weight:800;
+    margin-bottom:10px;
+}
+
+.brand span{
+    color:#7dff2f;
+}
+
+.tagline{
+    color:#7dff2f;
+    font-size:18px;
+    margin-bottom:35px;
+    letter-spacing:2px;
+}
+
+h1{
+    font-size:90px;
+    line-height:0.95;
+    font-weight:900;
+    margin-bottom:25px;
+}
+
+.green{
+    color:#7dff2f;
+}
+
+.description{
+    font-size:22px;
+    line-height:1.7;
+    color:#d8d8d8;
+    max-width:550px;
+}
+
+.section{
+    padding:100px 8%;
+    text-align:center;
+}
+
+.section h2{
+    font-size:52px;
+    margin-bottom:20px;
+}
+
+.section p{
+    color:#c9c9c9;
+    font-size:22px;
+    max-width:900px;
+    margin:auto;
+    line-height:1.8;
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin-top:60px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:#0d170d;
+    border:1px solid rgba(125,255,47,.18);
+    border-radius:25px;
+    padding:40px;
+    width:300px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    color:#7dff2f;
+    margin-bottom:15px;
+    font-size:28px;
+}
+
+.card p{
+    font-size:18px;
+}
+
+.vision{
+    background:#091109;
+}
+
+.footer{
+    padding:60px 20px;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+.footer h2{
+    font-size:42px;
+}
+
+.footer span{
+    color:#7dff2f;
+}
+
+@media(max-width:900px){
+
+.hero{
+padding-top:80px;
+align-items:flex-start;
+}
+
+.brand{
+font-size:38px;
+}
+
+h1{
+font-size:58px;
+}
+
+.description{
+font-size:18px;
+}
+
+.section h2{
+font-size:36px;
+}
+
+.section p{
+font-size:18px;
+}
+
+.logo{
+width:80px;
+}
+}
+</style>
 </head>
 
 <body>
-  <img src="metaearth-website.png" alt="MetaEarth AI">
+
+<section class="hero">
+<div class="container">
+
+<img src="logo.png" class="logo">
+
+<div class="brand">
+MetaEarth <span>AI</span>
+</div>
+
+<div class="tagline">
+TOUCH GRASS. SAVE EARTH.
+</div>
+
+<h1>
+TOUCH GRASS.<br>
+<span class="green">SAVE EARTH.</span>
+</h1>
+
+<p class="description">
+MetaEarth AI is building a movement where memes, community and purpose come together to create real impact for Earth.
+</p>
+
+</div>
+</section>
+
+<section class="section">
+
+<h2>Why MetaEarth <span class="green">AI?</span></h2>
+
+<p>
+We believe crypto can be more than hype. MetaEarth AI combines community, purpose and innovation to build something meaningful for the future.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>🌱 Nature Matters</h3>
+<p>
+We care about the planet and support a greener future.
+</p>
+</div>
+
+<div class="card">
+<h3>🤝 Community First</h3>
+<p>
+Strong communities build strong movements.
+</p>
+</div>
+
+<div class="card">
+<h3>🌍 Real Impact</h3>
+<p>
+We believe ideas should create real-world action.
+</p>
+</div>
+
+</div>
+</section>
+
+<section class="section vision">
+
+<h2>
+The Beginning Of
+<span class="green">Something Bigger.</span>
+</h2>
+
+<p>
+MetaEarth AI is more than a memecoin.  
+It's a movement powered by vision, community and purpose.
+</p>
+
+</section>
+
+<section class="footer">
+
+<h2>
+Together, We Can
+<span>Make Earth Proud.</span>
+</h2>
+
+</section>
+
 </body>
 </html>
