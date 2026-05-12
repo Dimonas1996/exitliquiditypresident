@@ -1,27 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>MetaEarth AI</title>
+
 <style>
-html,body{
-margin:0;
-width:100%;
-height:100%;
-overflow:hidden;
-background:#111;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-img{
-width:100%;
-height:100%;
-object-fit:cover;
-display:block;
+html, body{
+    width:100%;
+    overflow-x:hidden;
+    background:#000;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+}
+
+.wrapper{
+    width:100%;
+}
+
+.wrapper img{
+    width:100%;
+    height:auto;
+    display:block;
 }
 </style>
 </head>
+
 <body>
 
-<img src="metaearth-website.png">
+<div class="wrapper">
+    <img src="metaearth-website.png" alt="MetaEarth AI">
+</div>
 
 </body>
 </html>
