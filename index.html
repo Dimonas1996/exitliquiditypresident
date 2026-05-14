@@ -2,44 +2,306 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-<title>MetaEarth AI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MetaEarth AI | $MEAI</title>
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html, body{
-    width:100%;
-    overflow-x:hidden;
-    background:#000;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
-    display:flex;
-    justify-content:center;
+font-family:Arial,sans-serif;
+background:#081008;
+color:#fff;
 }
 
-.wrapper{
-    width:100%;
+.hero{
+min-height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.88)),
+url('guardian2.png') center/cover no-repeat;
 }
 
-.wrapper img{
-    width:100%;
-    height:auto;
-    display:block;
+.container{
+max-width:1200px;
+margin:auto;
+padding:20px;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+gap:15px;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo img{
+width:70px;
+height:70px;
+border-radius:50%;
+box-shadow:0 0 25px #79ff61;
+}
+
+.logo-text h1{
+font-size:28px;
+color:#79ff61;
+}
+
+.logo-text p{
+color:#ccc;
+}
+
+.btn{
+display:inline-block;
+padding:14px 22px;
+border-radius:14px;
+text-decoration:none;
+font-weight:700;
+margin:5px;
+}
+
+.green{
+background:#79ff61;
+color:#000;
+}
+
+.outline{
+border:1px solid #79ff61;
+color:#79ff61;
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1.1fr .9fr;
+gap:40px;
+align-items:center;
+padding:70px 0;
+}
+
+.hero-title{
+font-size:70px;
+font-weight:900;
+line-height:1.05;
+}
+
+.green-text{
+color:#79ff61;
+}
+
+.hero-image{
+width:100%;
+border-radius:28px;
+box-shadow:0 0 40px rgba(121,255,97,.35);
+}
+
+.section{
+padding:80px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+.section h2{
+font-size:42px;
+margin-bottom:20px;
+color:#79ff61;
+}
+
+.card-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.card{
+background:#0d180d;
+border:1px solid #1f331f;
+padding:24px;
+border-radius:24px;
+}
+
+.card img{
+width:100%;
+border-radius:18px;
+}
+
+.launch{
+font-size:52px;
+font-weight:900;
+color:#79ff61;
+}
+
+.footer{
+text-align:center;
+padding:40px;
+color:#aaa;
+}
+
+@media(max-width:900px){
+.hero-grid{
+grid-template-columns:1fr;
+}
+
+.hero-title{
+font-size:42px;
+}
 }
 </style>
 </head>
 
 <body>
 
-<div class="wrapper">
-    <img src="metaearth-website.png" alt="MetaEarth AI">
+<section class="hero">
+<div class="container">
+
+<nav>
+<div class="logo">
+<img src="logo.jpeg">
+
+<div class="logo-text">
+<h1>METAEARTH AI</h1>
+<p>Earth Guardians 🌍</p>
+</div>
+</div>
+
+<div>
+<a class="btn outline" href="https://x.com/metaearthai?s=21" target="_blank">Follow X</a>
+
+<a class="btn green" href="https://t.me/MetaEarth_AI" target="_blank">Join Telegram</a>
+</div>
+</nav>
+
+<div class="hero-grid">
+
+<div>
+<p style="color:#79ff61;font-weight:bold;margin-bottom:12px;">
+AI • COMMUNITY • EARTH 🌍
+</p>
+
+<div class="hero-title">
+More Than A Token.<br>
+<span class="green-text">A Vision For Earth</span>
+</div>
+
+<p style="font-size:20px;color:#ddd;margin:22px 0;">
+MetaEarth AI is building a stronger future powered by AI, community and Earth Guardians.
+This is more than hype — this is a long-term movement.
+</p>
+
+<a class="btn green" href="https://t.me/MetaEarth_AI">
+Become an Earth Guardian
+</a>
+
+<div style="margin-top:35px;">
+<div>🚀 OFFICIAL LAUNCH</div>
+<div class="launch">MAY 21</div>
+</div>
+</div>
+
+<div>
+<img class="hero-image" src="guardian1.png">
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="section">
+<h2>Our Vision 🌍</h2>
+
+<div class="card">
+MetaEarth AI combines community, AI and long-term vision to build something stronger than hype.
+We believe real communities can build real impact together.
+</div>
+</section>
+
+<section class="section">
+<h2>Why MetaEarth AI?</h2>
+
+<div class="card-grid">
+
+<div class="card">
+<h3>🌍 Community First</h3>
+<p>Building with real supporters and Earth Guardians.</p>
+</div>
+
+<div class="card">
+<h3>🤖 AI Powered</h3>
+<p>Innovation, growth and long-term thinking.</p>
+</div>
+
+<div class="card">
+<h3>🚀 Launching May 21</h3>
+<p>Still early to join the movement.</p>
+</div>
+
+<div class="card">
+<h3>🛡️ Long-Term Vision</h3>
+<p>Built for growth, not one day hype.</p>
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<h2>Tokenomics</h2>
+
+<div class="card-grid">
+<div class="card"><h3>Blockchain</h3><p>Solana</p></div>
+<div class="card"><h3>Ticker</h3><p>$MEAI</p></div>
+<div class="card"><h3>Launch</h3><p>Fair Launch</p></div>
+<div class="card"><h3>Tax</h3><p>0%</p></div>
+</div>
+</section>
+
+<section class="section">
+<h2>Roadmap</h2>
+
+<div class="card-grid">
+
+<div class="card">
+<h3>Phase 1</h3>
+<p>Website • Telegram • X • Community</p>
+</div>
+
+<div class="card">
+<h3>Phase 2</h3>
+<p>Growth • Raiders • Awareness</p>
+</div>
+
+<div class="card">
+<h3>Phase 3</h3>
+<p>🚀 Launch — MAY 21</p>
+</div>
+
+<div class="card">
+<img src="launch.png">
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<h2>FAQ</h2>
+
+<div class="card-grid">
+<div class="card"><h3>When Launch?</h3><p>May 21 🚀</p></div>
+<div class="card"><h3>Where To Join?</h3><p>Telegram & X</p></div>
+<div class="card"><h3>Blockchain?</h3><p>Solana</p></div>
+</div>
+</section>
+
+<div class="footer">
+MetaEarth AI 🌍 | Become an Earth Guardian
 </div>
 
 </body>
