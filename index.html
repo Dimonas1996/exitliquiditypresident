@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>MetaEarth AI</title>
 
 <style>
@@ -13,150 +13,198 @@ box-sizing:border-box;
 font-family:Arial,sans-serif;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 background:#050505;
-color:white;
+color:#fff;
 overflow-x:hidden;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:0 20px;
 }
 
 .hero{
 min-height:100vh;
 display:flex;
-flex-direction:column;
-justify-content:center;
 align-items:center;
+justify-content:center;
 text-align:center;
-padding:30px;
+padding:80px 20px;
 background:
-radial-gradient(circle at top, rgba(0,255,100,0.2), transparent 40%),
+radial-gradient(circle at top,
+rgba(88,255,140,0.15),
+transparent 40%),
 #050505;
 }
 
-.badge{
-color:#22c55e;
-font-weight:bold;
-margin-bottom:20px;
-font-size:18px;
+.logo{
+width:100px;
+border-radius:50%;
+box-shadow:0 0 30px rgba(88,255,140,0.2);
+margin-bottom:25px;
 }
 
-.hero h1{
-font-size:55px;
+.hero-img{
+width:100%;
+max-width:420px;
+border-radius:28px;
+margin-top:35px;
+box-shadow:0 0 40px rgba(88,255,140,0.15);
+}
+
+h1{
+font-size:58px;
 line-height:1.1;
-max-width:900px;
-margin-bottom:20px;
+margin-bottom:18px;
 }
 
-.hero p{
-max-width:700px;
-color:#b5b5b5;
+.subtitle{
 font-size:20px;
+color:#b5b5b5;
+max-width:720px;
+margin:auto;
 line-height:1.7;
 }
 
 .buttons{
 display:flex;
 gap:15px;
-flex-wrap:wrap;
-margin-top:30px;
 justify-content:center;
+flex-wrap:wrap;
+margin-top:35px;
 }
 
 .btn{
 padding:16px 28px;
-border-radius:14px;
-font-weight:bold;
+border-radius:16px;
 text-decoration:none;
-transition:0.3s;
+font-weight:bold;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-2px);
 }
 
 .telegram{
-background:#22c55e;
-color:black;
+background:#63ff78;
+color:#000;
 }
 
 .twitter{
-border:1px solid #22c55e;
-color:white;
+border:1px solid #63ff78;
+color:#fff;
 }
 
 .buy{
-background:#16a34a;
-color:white;
-box-shadow:0 0 20px rgba(34,197,94,0.5);
+background:#17b64f;
+color:#fff;
+box-shadow:0 0 25px rgba(99,255,120,.25);
 }
 
-.buy:hover{
-transform:scale(1.05);
+.launch-box{
+margin-top:35px;
+font-size:18px;
+color:#63ff78;
+font-weight:bold;
+line-height:1.8;
 }
 
 .section{
-padding:70px 25px;
+padding:90px 0;
 text-align:center;
 }
 
 .section h2{
-font-size:40px;
-margin-bottom:30px;
+font-size:42px;
+margin-bottom:25px;
+color:#63ff78;
+}
+
+.text{
+max-width:850px;
+margin:auto;
+color:#bdbdbd;
+line-height:1.8;
+font-size:18px;
 }
 
 .cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:20px;
-max-width:1100px;
-margin:auto;
+margin-top:40px;
 }
 
 .card{
 background:#101010;
-border:1px solid #1f2937;
+border:1px solid #1e1e1e;
 padding:30px;
-border-radius:20px;
+border-radius:22px;
 }
 
 .card h3{
-margin-bottom:15px;
+margin-bottom:12px;
 font-size:24px;
-color:#22c55e;
+color:#63ff78;
 }
 
 .card p{
-color:#bdbdbd;
-line-height:1.6;
+color:#b8b8b8;
+line-height:1.7;
 }
 
-.launch{
-font-size:24px;
-margin-top:35px;
-color:#22c55e;
-font-weight:bold;
+.launch-img{
+width:100%;
+max-width:450px;
+border-radius:28px;
+margin-top:30px;
+box-shadow:0 0 35px rgba(88,255,140,.15);
 }
 
 .footer{
-padding:60px 20px;
+padding:80px 20px;
 text-align:center;
-border-top:1px solid #1f2937;
+border-top:1px solid #1a1a1a;
+}
+
+.footer-img{
+width:100%;
+max-width:380px;
+border-radius:28px;
+margin-bottom:25px;
+box-shadow:0 0 30px rgba(88,255,140,.15);
 }
 
 .footer h2{
-font-size:36px;
-margin-bottom:15px;
+font-size:38px;
+margin-bottom:12px;
 }
 
 .footer p{
-color:#999;
+color:#9f9f9f;
 }
 
 @media(max-width:768px){
-.hero h1{
+
+h1{
 font-size:38px;
 }
-.hero p{
+
+.subtitle{
 font-size:18px;
 }
+
 .section h2{
 font-size:32px;
 }
+
 }
 </style>
 </head>
@@ -164,19 +212,17 @@ font-size:32px;
 <body>
 
 <section class="hero">
+<div class="container">
 
-<div class="badge">
-🚀 FAIR LAUNCH • SOLANA • $MEAI
-</div>
+<img src="logo.jpeg" class="logo">
 
 <h1>
 Earth got rugged.<br>
 AI fights back 🌍🤖
 </h1>
 
-<p>
-MetaEarth AI is building a future powered by AI,
-sustainability and community.
+<p class="subtitle">
+MetaEarth AI is building a future powered by AI, sustainability and community.
 More than a token — a movement.
 </p>
 
@@ -186,7 +232,7 @@ More than a token — a movement.
 Join Telegram
 </a>
 
-<a href="#" class="btn twitter">
+<a href="https://x.com/metaearthai?s=21" class="btn twitter">
 Follow X
 </a>
 
@@ -196,48 +242,80 @@ BUY $MEAI 🚀
 
 </div>
 
-<div class="launch">
-🎁 2 Contests LIVE • Ending May 20<br>
+<div class="launch-box">
+🎁 2 Contests LIVE — Ending May 20<br>
 🚀 Launch: May 21
 </div>
 
+<img src="guardian1.png" class="hero-img">
+
+</div>
 </section>
 
 <section class="section">
+<div class="container">
 
-<h2>Why MetaEarth AI?</h2>
+<h2>What Is MetaEarth AI?</h2>
+
+<p class="text">
+MetaEarth AI is more than just another token.
+
+We are building a long-term movement where
+AI, sustainability and community come together.
+
+No fake hype.
+Just building step by step 🌍
+</p>
 
 <div class="cards">
 
 <div class="card">
-<h3>🤖 AI Powered</h3>
+<h3>🤖 AI Vision</h3>
 <p>
-Building a smarter future powered by AI and innovation.
+Building around AI innovation, future ideas and long-term value.
 </p>
 </div>
 
 <div class="card">
-<h3>🌱 Earth Focused</h3>
+<h3>🌱 Earth Movement</h3>
 <p>
-Touch Grass. Save Earth.
-Building a movement for the future.
+Nature, sustainability and building awareness for a cleaner future.
 </p>
 </div>
 
 <div class="card">
-<h3>👥 Community Driven</h3>
+<h3>👥 Community</h3>
 <p>
-Built by Earth Guardians.
-Community comes first.
+Built by Earth Guardians — together from day one.
 </p>
+</div>
+
 </div>
 
 </div>
 </section>
 
 <section class="section">
+<div class="container">
 
-<h2>Roadmap 🚀</h2>
+<h2>Launch & Contests 🚀</h2>
+
+<p class="text">
+We are getting closer.
+
+Still early.
+Still time to join the movement 🌍
+</p>
+
+<img src="launch.png" class="launch-img">
+
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<h2>Roadmap</h2>
 
 <div class="cards">
 
@@ -254,7 +332,7 @@ Launch Preparation
 <h3>Phase 2</h3>
 <p>
 Marketing Push<br>
-Partnerships<br>
+Brand Growth<br>
 Community Expansion
 </p>
 </div>
@@ -263,41 +341,19 @@ Community Expansion
 <h3>Phase 3</h3>
 <p>
 AI Ecosystem<br>
-Utility Growth<br>
-Long-Term Vision
+Long-Term Vision<br>
+Future Expansion
 </p>
 </div>
 
 </div>
 
-</section>
-
-<section class="section">
-
-<h2>FAQ</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>When Launch?</h3>
-<p>May 21 🚀</p>
 </div>
-
-<div class="card">
-<h3>Blockchain?</h3>
-<p>Solana</p>
-</div>
-
-<div class="card">
-<h3>Fair Launch?</h3>
-<p>Yes • Community Driven</p>
-</div>
-
-</div>
-
 </section>
 
 <footer class="footer">
+
+<img src="guardian2.png" class="footer-img">
 
 <h2>Become an Earth Guardian 🌍</h2>
 
