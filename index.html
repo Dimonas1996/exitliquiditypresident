@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>MetaEarth AI</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
 }
 
 html{
@@ -20,8 +23,11 @@ scroll-behavior:smooth;
 body{
 background:#050505;
 color:#fff;
+font-family:'Inter',sans-serif;
 overflow-x:hidden;
 }
+
+/* Container */
 
 .container{
 max-width:1200px;
@@ -29,52 +35,62 @@ margin:auto;
 padding:0 20px;
 }
 
+/* Hero */
+
 .hero{
 min-height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-padding:80px 20px;
+padding:90px 20px;
 background:
 radial-gradient(circle at top,
-rgba(88,255,140,0.15),
-transparent 40%),
+rgba(99,255,120,.15),
+transparent 45%),
 #050505;
 }
 
 .logo{
-width:100px;
+width:105px;
 border-radius:50%;
-box-shadow:0 0 30px rgba(88,255,140,0.2);
+box-shadow:0 0 30px rgba(99,255,120,.20);
 margin-bottom:25px;
 }
 
-.hero-img{
-width:100%;
-max-width:420px;
-border-radius:28px;
-margin-top:35px;
-box-shadow:0 0 40px rgba(88,255,140,0.15);
+h1,h2,h3{
+font-family:'Orbitron',sans-serif;
+letter-spacing:1.5px;
 }
 
 h1{
 font-size:58px;
-line-height:1.1;
-margin-bottom:18px;
+line-height:1.15;
+text-transform:uppercase;
+margin-bottom:20px;
 }
 
 .subtitle{
 font-size:20px;
-color:#b5b5b5;
-max-width:720px;
+color:#bcbcbc;
+max-width:750px;
 margin:auto;
-line-height:1.7;
+line-height:1.8;
 }
+
+.hero-img{
+width:100%;
+max-width:450px;
+margin-top:35px;
+border-radius:30px;
+box-shadow:0 0 35px rgba(99,255,120,.15);
+}
+
+/* Buttons */
 
 .buttons{
 display:flex;
-gap:15px;
+gap:14px;
 justify-content:center;
 flex-wrap:wrap;
 margin-top:35px;
@@ -84,8 +100,9 @@ margin-top:35px;
 padding:16px 28px;
 border-radius:16px;
 text-decoration:none;
-font-weight:bold;
-transition:.3s;
+font-weight:600;
+transition:.25s;
+font-family:'Inter',sans-serif;
 }
 
 .btn:hover{
@@ -103,18 +120,22 @@ color:#fff;
 }
 
 .buy{
-background:#17b64f;
+background:#1fc254;
 color:#fff;
 box-shadow:0 0 25px rgba(99,255,120,.25);
 }
 
-.launch-box{
+/* Launch Info */
+
+.launch-info{
 margin-top:35px;
-font-size:18px;
-color:#63ff78;
+font-size:20px;
 font-weight:bold;
 line-height:1.8;
+color:#63ff78;
 }
+
+/* Sections */
 
 .section{
 padding:90px 0;
@@ -122,74 +143,76 @@ text-align:center;
 }
 
 .section h2{
-font-size:42px;
-margin-bottom:25px;
+font-size:40px;
+margin-bottom:22px;
 color:#63ff78;
 }
 
 .text{
 max-width:850px;
 margin:auto;
-color:#bdbdbd;
-line-height:1.8;
 font-size:18px;
+line-height:1.8;
+color:#bcbcbc;
 }
+
+/* Cards */
 
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:20px;
-margin-top:40px;
+margin-top:45px;
 }
 
 .card{
-background:#101010;
-border:1px solid #1e1e1e;
-padding:30px;
-border-radius:22px;
+background:#111;
+border:1px solid #1f1f1f;
+padding:32px;
+border-radius:24px;
 }
 
 .card h3{
-margin-bottom:12px;
 font-size:24px;
+margin-bottom:12px;
 color:#63ff78;
 }
 
 .card p{
-color:#b8b8b8;
+color:#bdbdbd;
 line-height:1.7;
 }
 
-.launch-img{
-width:100%;
-max-width:450px;
-border-radius:28px;
-margin-top:30px;
-box-shadow:0 0 35px rgba(88,255,140,.15);
-}
+/* Images */
 
-.footer{
-padding:80px 20px;
-text-align:center;
-border-top:1px solid #1a1a1a;
-}
-
+.launch-img,
 .footer-img{
 width:100%;
-max-width:380px;
-border-radius:28px;
-margin-bottom:25px;
-box-shadow:0 0 30px rgba(88,255,140,.15);
+max-width:450px;
+border-radius:30px;
+margin-top:35px;
+box-shadow:0 0 35px rgba(99,255,120,.15);
+}
+
+/* Footer */
+
+.footer{
+padding:90px 20px;
+text-align:center;
+border-top:1px solid #171717;
 }
 
 .footer h2{
 font-size:38px;
-margin-bottom:12px;
+margin:25px 0 10px;
 }
 
 .footer p{
-color:#9f9f9f;
+color:#999;
+font-size:18px;
 }
+
+/* Mobile */
 
 @media(max-width:768px){
 
@@ -206,19 +229,23 @@ font-size:32px;
 }
 
 }
+
 </style>
 </head>
 
 <body>
 
+<!-- HERO -->
+
 <section class="hero">
+
 <div class="container">
 
 <img src="logo.jpeg" class="logo">
 
 <h1>
 Earth got rugged.<br>
-AI fights back 🌍🤖
+AI fights back 🌍
 </h1>
 
 <p class="subtitle">
@@ -242,17 +269,21 @@ BUY $MEAI 🚀
 
 </div>
 
-<div class="launch-box">
+<div class="launch-info">
 🎁 2 Contests LIVE — Ending May 20<br>
 🚀 Launch: May 21
 </div>
 
+<!-- PAGRINDINĖ NUOTRAUKA -->
 <img src="guardian1.png" class="hero-img">
 
 </div>
 </section>
 
+<!-- ABOUT -->
+
 <section class="section">
+
 <div class="container">
 
 <h2>What Is MetaEarth AI?</h2>
@@ -260,8 +291,7 @@ BUY $MEAI 🚀
 <p class="text">
 MetaEarth AI is more than just another token.
 
-We are building a long-term movement where
-AI, sustainability and community come together.
+We are building a long-term movement where AI, sustainability and community come together.
 
 No fake hype.
 Just building step by step 🌍
@@ -272,21 +302,21 @@ Just building step by step 🌍
 <div class="card">
 <h3>🤖 AI Vision</h3>
 <p>
-Building around AI innovation, future ideas and long-term value.
+Building around AI innovation, future ideas and long-term growth.
 </p>
 </div>
 
 <div class="card">
 <h3>🌱 Earth Movement</h3>
 <p>
-Nature, sustainability and building awareness for a cleaner future.
+Nature, sustainability and a cleaner future.
 </p>
 </div>
 
 <div class="card">
 <h3>👥 Community</h3>
 <p>
-Built by Earth Guardians — together from day one.
+Built by Earth Guardians from day one.
 </p>
 </div>
 
@@ -295,24 +325,29 @@ Built by Earth Guardians — together from day one.
 </div>
 </section>
 
+<!-- LAUNCH -->
+
 <section class="section">
+
 <div class="container">
 
 <h2>Launch & Contests 🚀</h2>
 
 <p class="text">
-We are getting closer.
-
 Still early.
 Still time to join the movement 🌍
 </p>
 
+<!-- MAY 21 POSTER -->
 <img src="launch.png" class="launch-img">
 
 </div>
 </section>
 
+<!-- ROADMAP -->
+
 <section class="section">
+
 <div class="container">
 
 <h2>Roadmap</h2>
@@ -351,8 +386,11 @@ Future Expansion
 </div>
 </section>
 
+<!-- FOOTER -->
+
 <footer class="footer">
 
+<!-- KITAS GUARDIAN -->
 <img src="guardian2.png" class="footer-img">
 
 <h2>Become an Earth Guardian 🌍</h2>
